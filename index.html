@@ -1,1607 +1,1110 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-    <meta name="theme-color" content="#122219">
-
-    <meta name="description"
-          content="Приглашение на день рождения Васи — 10 октября 2026 года, Greenvald Park Scandinavia">
-
-    <title>День рождения Васи · 10 октября 2026</title>
-
-    <style>
-
-        /* ==============================
-           ОСНОВНЫЕ НАСТРОЙКИ
-        ============================== */
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
-
-            color: #ffffff;
-            background: #0b1710;
-
-            line-height: 1.55;
-
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            color: inherit;
-        }
-
-
-        /* ==============================
-           ФОН
-        ============================== */
-
-        .page {
-            min-height: 100vh;
-
-            background:
-                radial-gradient(
-                    circle at 50% -10%,
-                    rgba(89, 132, 92, 0.65),
-                    transparent 45%
-                ),
-
-                linear-gradient(
-                    180deg,
-                    #203b29 0%,
-                    #122219 38%,
-                    #0b1710 100%
-                );
-        }
-
-
-        /* ==============================
-           ГЛАВНЫЙ ЭКРАН
-        ============================== */
-
-        .hero {
-            min-height: 100vh;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            padding:
-                max(24px, env(safe-area-inset-top))
-                14px
-                max(40px, env(safe-area-inset-bottom));
-        }
-
-
-        .card {
-            width: 100%;
-            max-width: 760px;
-
-            padding: 24px 18px 36px;
-
-            border-radius: 30px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,0.12),
-                    rgba(255,255,255,0.055)
-                );
-
-            border: 1px solid rgba(255,255,255,0.17);
-
-            box-shadow:
-                0 30px 80px rgba(0,0,0,0.45),
-                inset 0 1px 0 rgba(255,255,255,0.08);
-
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-        }
-
-
-        /* ==============================
-           ВЕРХ
-        ============================== */
-
-        .forest {
-            font-size: 46px;
-            line-height: 1;
-
-            margin: 3px 0 18px;
-
-            letter-spacing: 4px;
-        }
-
-
-        .eyebrow {
-            font-size: 11px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 3px;
-
-            opacity: 0.68;
-        }
-
-
-        h1 {
-            margin: 10px 0 14px;
-
-            font-size: clamp(40px, 10vw, 70px);
-
-            line-height: 0.98;
-
-            letter-spacing: -2px;
-        }
-
-
-        .intro {
-            max-width: 600px;
-
-            margin: 0 auto 24px;
-
-            font-size: 18px;
-
-            opacity: 0.9;
-        }
-
-
-        /* ==============================
-           ФОТО
-        ============================== */
-
-        .birthday-photo {
-            display: block;
-
-            width: 100%;
-            max-width: 660px;
-
-            max-height: 520px;
-
-            margin: 4px auto 26px;
-
-            object-fit: cover;
-
-            border-radius: 22px;
-
-            box-shadow:
-                0 18px 45px rgba(0,0,0,0.38);
-
-            border: 1px solid rgba(255,255,255,0.12);
-        }
-
-
-        /* ==============================
-           ДАТА
-        ============================== */
-
-        .event-date {
-            display: inline-block;
-
-            margin: 8px 0 8px;
-
-            padding: 12px 20px;
-
-            border-radius: 999px;
-
-            background:
-                rgba(255,255,255,0.13);
-
-            border:
-                1px solid rgba(255,255,255,0.12);
-
-            font-size: 18px;
-
-            font-weight: 700;
-        }
-
-
-        .event-time {
-            font-size: 16px;
-
-            opacity: 0.75;
-
-            margin-bottom: 24px;
-        }
-
-
-        /* ==============================
-           РАЗДЕЛИТЕЛЬ
-        ============================== */
-
-        .divider {
-            width: 70px;
-            height: 2px;
-
-            margin: 27px auto;
-
-            background:
-                rgba(255,255,255,0.3);
-        }
-
-
-        /* ==============================
-           COUNTDOWN
-        ============================== */
-
-        .countdown-title {
-            font-size: 11px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 3px;
-
-            opacity: 0.6;
-
-            margin-bottom: 12px;
-        }
-
-
-        .countdown {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 8px;
-
-            margin: 0 auto 25px;
-        }
-
-
-        .count {
-            padding: 13px 4px 10px;
-
-            border-radius: 16px;
-
-            background:
-                rgba(255,255,255,0.08);
-
-            border:
-                1px solid rgba(255,255,255,0.07);
-        }
-
-
-        .count strong {
-            display: block;
-
-            font-size: 25px;
-
-            line-height: 1.1;
-        }
-
-
-        .count small {
-            display: block;
-
-            margin-top: 4px;
-
-            font-size: 11px;
-
-            opacity: 0.58;
-        }
-
-
-        /* ==============================
-           ПРОГРАММА
-        ============================== */
-
-        .program {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 10px;
-
-            margin: 24px 0;
-        }
-
-
-        .program-item {
-            padding: 17px 8px;
-
-            border-radius: 18px;
-
-            background:
-                rgba(255,255,255,0.075);
-
-            border:
-                1px solid rgba(255,255,255,0.06);
-
-            font-size: 15px;
-        }
-
-
-        .program-item span {
-            display: block;
-
-            font-size: 29px;
-
-            margin-bottom: 3px;
-        }
-
-
-        /* ==============================
-           ТЕКСТ
-        ============================== */
-
-        .message {
-            max-width: 610px;
-
-            margin: 27px auto;
-
-            font-size: 18px;
-
-            opacity: 0.9;
-        }
-
-
-        /* ==============================
-           ИНФОРМАЦИОННЫЕ БЛОКИ
-        ============================== */
-
-        .section {
-            margin-top: 18px;
-
-            padding: 20px;
-
-            text-align: left;
-
-            border-radius: 20px;
-
-            background:
-                rgba(255,255,255,0.07);
-
-            border:
-                1px solid rgba(255,255,255,0.07);
-        }
-
-
-        .section h2 {
-            margin: 0 0 11px;
-
-            font-size: 21px;
-        }
-
-
-        .section p {
-            margin: 8px 0;
-        }
-
-
-        .section ul {
-            margin: 9px 0 0;
-
-            padding-left: 21px;
-        }
-
-
-        .section li {
-            margin: 7px 0;
-        }
-
-
-        /* ==============================
-           МЕСТО
-        ============================== */
-
-        .place-name {
-            font-size: 25px;
-
-            font-weight: 750;
-
-            margin-bottom: 4px;
-        }
-
-
-        .address {
-            font-size: 15px;
-
-            opacity: 0.78;
-        }
-
-
-        .coordinates {
-            text-align: center;
-
-            margin-top: 9px;
-
-            font-size: 12px;
-
-            opacity: 0.5;
-        }
-
-
-        /* ==============================
-           КНОПКИ
-        ============================== */
-
-        .buttons {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 9px;
-
-            margin-top: 15px;
-        }
-
-
-        .button {
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            min-height: 48px;
-
-            padding: 11px 9px;
-
-            text-align: center;
-
-            text-decoration: none;
-
-            border-radius: 14px;
-
-            color: #ffffff;
-
-            background:
-                rgba(255,255,255,0.12);
-
-            border:
-                1px solid rgba(255,255,255,0.10);
-
-            font-size: 14px;
-
-            font-weight: 650;
-
-            cursor: pointer;
-
-            transition:
-                transform 0.15s ease,
-                background 0.15s ease;
-        }
-
-
-        .button:active {
-            transform: scale(0.97);
-        }
-
-
-        .button.primary {
-            background:
-                #2f6b3b;
-        }
-
-
-        .button.primary:active {
-            background:
-                #25572f;
-        }
-
-
-        /* ==============================
-           КАРТА
-        ============================== */
-
-        .map-wrapper {
-            margin-top: 15px;
-
-            overflow: hidden;
-
-            border-radius: 17px;
-
-            border:
-                1px solid rgba(255,255,255,0.08);
-
-            background: #15251b;
-        }
-
-
-        .map {
-            display: block;
-
-            width: 100%;
-
-            height: 320px;
-
-            border: 0;
-        }
-
-
-        /* ==============================
-           СТАТУС
-        ============================== */
-
-        .status {
-            display: none;
-
-            margin-top: 15px;
-
-            padding: 13px;
-
-            text-align: center;
-
-            border-radius: 14px;
-
-            background:
-                rgba(255,255,255,0.08);
-
-            font-size: 14px;
-        }
-
-
-        /* ==============================
-           ФУТЕР
-        ============================== */
-
-        .footer {
-            margin-top: 32px;
-
-            font-size: 12px;
-
-            opacity: 0.45;
-        }
-
-
-        /* ==============================
-           МОБИЛЬНЫЕ
-        ============================== */
-
-        @media (max-width: 520px) {
-
-            .hero {
-                padding-left: 9px;
-                padding-right: 9px;
-            }
-
-            .card {
-                padding:
-                    23px 14px
-                    max(30px, env(safe-area-inset-bottom));
-            }
-
-            h1 {
-                letter-spacing: -1.5px;
-            }
-
-            .intro {
-                font-size: 17px;
-            }
-
-            .count strong {
-                font-size: 21px;
-            }
-
-            .buttons {
-                grid-template-columns: 1fr;
-            }
-
-            .map {
-                height: 285px;
-            }
-
-            .section {
-                padding: 18px;
-            }
-        }
-
-
-        /* ==============================
-           АНИМАЦИЯ
-        ============================== */
-
-        @keyframes appear {
-
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        }
-
-
-        .card {
-            animation:
-                appear 0.7s ease-out;
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#102018">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>День рождения Васи · 10 октября 2026</title>
+<style>
+:root{
+    --bg:#0b1510;
+    --bg2:#102018;
+    --card:#14261c;
+    --card2:#193023;
+    --text:#f4f5ef;
+    --muted:rgba(244,245,239,.68);
+    --muted2:rgba(244,245,239,.48);
+    --accent:#a8d5a2;
+    --accent2:#d2e8bd;
+    --line:rgba(255,255,255,.09);
+    --shadow:0 18px 60px rgba(0,0,0,.32);
+    --radius:24px;
+}
+*{
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    margin:0;
+    min-width:320px;
+    background:
+        radial-gradient(circle at 20% 0%, rgba(105,145,111,.18), transparent 32%),
+        radial-gradient(circle at 90% 20%, rgba(72,111,83,.14), transparent 30%),
+        var(--bg);
+    color:var(--text);
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+}
+a{
+    color:inherit;
+    text-decoration:none;
+}
+button{
+    font:inherit;
+}
+.page{
+    width:100%;
+    max-width:760px;
+    margin:0 auto;
+    padding:18px 14px 100px;
+}
+.hero-card{
+    overflow:hidden;
+    border:1px solid var(--line);
+    border-radius:30px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.015)
+        ),
+        var(--bg2);
+    box-shadow:var(--shadow);
+}
+.hero{
+    padding:24px 18px 22px;
+    text-align:center;
+}
+.forest{
+    font-size:27px;
+    letter-spacing:4px;
+    margin-bottom:10px;
+}
+.eyebrow{
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:700;
+}
+.birthday-photo{
+    display:block;
+    width:100%;
+    max-height:470px;
+    object-fit:cover;
+    border-radius:22px;
+    margin:18px auto 22px;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 15px 45px rgba(0,0,0,.28);
+}
+h1{
+    margin:0;
+    font-size:clamp(39px,10vw,70px);
+    line-height:.98;
+    letter-spacing:-2.5px;
+    font-weight:800;
+}
+.intro{
+    max-width:610px;
+    margin:20px auto 0;
+    color:var(--muted);
+    font-size:16px;
+}
+.event-date{
+    margin-top:25px;
+    font-size:22px;
+    font-weight:800;
+}
+.event-time{
+    margin-top:5px;
+    color:var(--muted);
+    font-size:15px;
+}
+.divider{
+    height:1px;
+    background:var(--line);
+    margin:25px 0;
+}
+.countdown-title{
+    color:var(--muted2);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-weight:700;
+}
+.countdown{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    margin-top:12px;
+}
+.time-box{
+    padding:13px 5px;
+    border-radius:16px;
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.05);
+}
+.time-number{
+    display:block;
+    font-size:24px;
+    font-weight:800;
+    line-height:1.05;
+}
+.time-label{
+    display:block;
+    margin-top:5px;
+    font-size:10px;
+    color:var(--muted2);
+    text-transform:uppercase;
+    letter-spacing:.8px;
+}
+.section{
+    margin-top:16px;
+    padding:20px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:rgba(255,255,255,.035);
+    scroll-margin-top:20px;
+}
+.section h2{
+    margin:0 0 15px;
+    font-size:22px;
+    line-height:1.2;
+    letter-spacing:-.4px;
+}
+.section-intro{
+    margin:-4px 0 16px;
+    color:var(--muted);
+    font-size:14px;
+}
+.message{
+    margin:18px 4px 4px;
+    color:var(--muted);
+    font-size:15px;
+    text-align:center;
+}
+/* PROGRAM */
+.program{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:9px;
+    margin-top:22px;
+}
+.program-item{
+    min-height:88px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:11px 8px;
+    border-radius:16px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.05);
+}
+.program-time{
+    font-weight:800;
+    color:var(--accent2);
+    font-size:15px;
+}
+.program-title{
+    margin-top:4px;
+    font-size:12px;
+    line-height:1.25;
+    color:var(--muted);
+}
+/* DAY PLAN */
+.timeline{
+    position:relative;
+    display:grid;
+    gap:10px;
+}
+.timeline-item{
+    display:grid;
+    grid-template-columns:58px 1fr;
+    gap:12px;
+    align-items:start;
+    padding:13px;
+    border-radius:16px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.045);
+}
+.timeline-time{
+    font-size:14px;
+    font-weight:800;
+    color:var(--accent2);
+    padding-top:1px;
+}
+.timeline-title{
+    font-weight:750;
+    font-size:15px;
+}
+.timeline-text{
+    margin-top:3px;
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.45;
+}
+/* WHATSAPP */
+.whatsapp-card{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(125,181,116,.14),
+            rgba(255,255,255,.035)
+        );
+}
+.whatsapp-icon{
+    font-size:31px;
+    margin-bottom:5px;
+}
+.whatsapp-description{
+    margin:0 0 17px;
+    color:var(--muted);
+    font-size:14px;
+}
+/* PLACE */
+.place-name{
+    font-size:20px;
+    font-weight:800;
+    margin-bottom:8px;
+}
+.address{
+    margin:0;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.6;
+}
+.coordinates{
+    margin-top:10px;
+    color:var(--muted2);
+    font-size:11px;
+    text-align:center;
+}
+/* BUTTONS */
+.buttons{
+    display:grid;
+    gap:10px;
+    margin-top:17px;
+}
+.button{
+    min-height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    padding:13px 16px;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:15px;
+    background:rgba(255,255,255,.055);
+    color:var(--text);
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    transition:
+        transform .15s ease,
+        background .15s ease;
+    -webkit-tap-highlight-color:transparent;
+}
+.button:active{
+    transform:scale(.98);
+}
+.button.primary{
+    background:var(--accent);
+    color:#102018;
+    border-color:transparent;
+}
+.button.secondary{
+    background:rgba(168,213,162,.09);
+    border-color:rgba(168,213,162,.20);
+}
+/* MAP */
+.map-wrapper{
+    overflow:hidden;
+    margin-top:17px;
+    border-radius:19px;
+    border:1px solid var(--line);
+    background:#d8ddd8;
+}
+.map{
+    display:block;
+    width:100%;
+    height:330px;
+    border:0;
+}
+/* TAKE WITH YOU */
+.pack-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:9px;
+}
+.pack-card{
+    min-height:105px;
+    padding:15px;
+    border-radius:17px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.05);
+}
+.pack-icon{
+    font-size:25px;
+}
+.pack-title{
+    margin-top:7px;
+    font-size:14px;
+    font-weight:750;
+}
+.pack-text{
+    margin-top:3px;
+    color:var(--muted2);
+    font-size:12px;
+    line-height:1.4;
+}
+/* ABOUT */
+.about-text{
+    margin:0;
+    color:var(--muted);
+    font-size:14px;
+}
+.about-text + .about-text{
+    margin-top:12px;
+}
+/* USEFUL */
+.utility-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+}
+/* FOOTER */
+.final{
+    padding:32px 15px 10px;
+    text-align:center;
+}
+.final-title{
+    margin:10px 0 6px;
+    font-size:28px;
+    line-height:1.1;
+    font-weight:800;
+}
+.final-subtitle{
+    margin:0;
+    color:var(--muted);
+    font-size:14px;
+}
+.footer{
+    margin-top:24px;
+    color:var(--muted2);
+    font-size:11px;
+}
+/* STATUS */
+.status{
+    min-height:18px;
+    margin-top:10px;
+    text-align:center;
+    color:var(--accent2);
+    font-size:12px;
+}
+/* BOTTOM BAR */
+.bottom-bar{
+    position:fixed;
+    z-index:50;
+    left:50%;
+    bottom:12px;
+    transform:translateX(-50%);
+    width:min(calc(100% - 24px),520px);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    padding:8px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;
+    background:rgba(12,25,17,.88);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    box-shadow:0 12px 35px rgba(0,0,0,.4);
+}
+.bottom-button{
+    min-height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:13px;
+    font-size:13px;
+    font-weight:750;
+}
+.bottom-button.whatsapp{
+    background:#a8d5a2;
+    color:#102018;
+}
+.bottom-button.top{
+    background:rgba(255,255,255,.07);
+    color:var(--text);
+}
+/* SMALL SCREENS */
+@media(max-width:430px){
+    .page{
+        padding:10px 9px 95px;
+    }
+    .hero{
+        padding:20px 13px 18px;
+    }
+    .hero-card{
+        border-radius:24px;
+    }
+    .birthday-photo{
+        border-radius:18px;
+        margin-top:15px;
+    }
+    h1{
+        font-size:44px;
+    }
+    .intro{
+        font-size:14px;
+    }
+    .event-date{
+        font-size:20px;
+    }
+    .program{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .section{
+        padding:17px;
+        border-radius:20px;
+    }
+    .map{
+        height:285px;
+    }
+}
+@media(max-width:350px){
+    .countdown{
+        gap:5px;
+    }
+    .time-number{
+        font-size:21px;
+    }
+    .program{
+        grid-template-columns:1fr 1fr;
+    }
+    .timeline-item{
+        grid-template-columns:52px 1fr;
+    }
+}
+</style>
 </head>
-
-
 <body>
-
 <div class="page">
-
-<section class="hero">
-
-<div class="card">
-
-    <!-- ==========================
-         ВЕРХ
-    =========================== -->
-
-    <div class="forest">
-        🌲🔥🏕️
-    </div>
-
-    <div class="eyebrow">
-        Приглашение
-    </div>
-
-
-    <!-- ФОТО -->
-
-    <img
-        src="birthday.jpeg"
-        alt="День рождения Васи"
-        class="birthday-photo"
-        onerror="this.style.display='none';"
-    >
-
-
-    <h1>
-        День<br>
-        рождения Васи
-    </h1>
-
-
-    <p class="intro">
-        В этот раз предлагаю отметить день рождения
-        не в ресторане, а выбраться из города —
-        в лес, к озеру, костру и хорошей компании.
-    </p>
-
-
-    <!-- ==========================
-         ДАТА
-    =========================== -->
-
-    <div class="event-date">
-        📅 10 октября 2026
-    </div>
-
-    <div class="event-time">
-        ⏰ Начало в 10:00 · до 22:00
-    </div>
-
-
-    <!-- ==========================
-         COUNTDOWN
-    =========================== -->
-
-    <div class="divider"></div>
-
-    <div class="countdown-title">
-        До начала праздника
-    </div>
-
-
-    <div
-        class="countdown"
-        id="countdown"
-    >
-
-        <div class="count">
-            <strong id="days">—</strong>
-            <small>дней</small>
-        </div>
-
-        <div class="count">
-            <strong id="hours">—</strong>
-            <small>часов</small>
-        </div>
-
-        <div class="count">
-            <strong id="minutes">—</strong>
-            <small>минут</small>
-        </div>
-
-        <div class="count">
-            <strong id="seconds">—</strong>
-            <small>секунд</small>
-        </div>
-
-    </div>
-
-
-    <!-- ==========================
-         ПРОГРАММА
-    =========================== -->
-
-    <div class="program">
-
-        <div class="program-item">
-            <span>🏕️</span>
-            Пикник
-        </div>
-
-        <div class="program-item">
-            <span>🔥</span>
-            Костёр
-        </div>
-
-        <div class="program-item">
-            <span>🥩</span>
-            Шашлык
-        </div>
-
-        <div class="program-item">
-            <span>🌲</span>
-            Прогулка
-        </div>
-
-        <div class="program-item">
-            <span>🧖</span>
-            Отдых
-        </div>
-
-        <div class="program-item">
-            <span>🥂</span>
-            День рождения
-        </div>
-
-    </div>
-
-
-    <p class="message">
-        Буду рад провести этот день вместе —
-        погулять по лесу, пообщаться,
-        вкусно поесть, посидеть у огня
-        и просто хорошо провести время.
-    </p>
-
-    
+<div class="hero-card">
 <!-- ==========================
-     ПЛАН ДНЯ
+     HERO
 =========================== -->
-
-<div class="section">
-
-    <h2>
-        🕙 План дня
-    </h2>
-
-    <p style="
-        margin-top: -4px;
-        margin-bottom: 15px;
-        opacity: .65;
-        font-size: 14px;
-    ">
-        Ориентировочно — без строгого расписания 😊
-    </p>
-
-    <div style="
-        display:grid;
-        gap:10px;
-    ">
-
-        <div style="
-            display:flex;
-            gap:13px;
-            align-items:flex-start;
-            padding:13px;
-            border-radius:14px;
-            background:rgba(255,255,255,.055);
-        ">
-
-            <div style="
-                min-width:52px;
-                font-weight:750;
-            ">
-                10:00
-            </div>
-
-            <div>
-                <b>Встречаемся</b>
-                <div style="opacity:.68;font-size:14px;">
-                    Приезжаем, знакомимся, размещаемся
-                    и начинаем отдыхать.
-                </div>
-            </div>
-
-        </div>
-
-
-        <div style="
-            display:flex;
-            gap:13px;
-            align-items:flex-start;
-            padding:13px;
-            border-radius:14px;
-            background:rgba(255,255,255,.055);
-        ">
-
-            <div style="
-                min-width:52px;
-                font-weight:750;
-            ">
-                11:00
-            </div>
-
-            <div>
-                <b>Лес и прогулка</b>
-                <div style="opacity:.68;font-size:14px;">
-                    Гуляем, отдыхаем на природе,
-                    фотографируемся.
-                </div>
-            </div>
-
-        </div>
-
-
-        <div style="
-            display:flex;
-            gap:13px;
-            align-items:flex-start;
-            padding:13px;
-            border-radius:14px;
-            background:rgba(255,255,255,.055);
-        ">
-
-            <div style="
-                min-width:52px;
-                font-weight:750;
-            ">
-                13:00
-            </div>
-
-            <div>
-                <b>Пикник</b>
-                <div style="opacity:.68;font-size:14px;">
-                    Еда, шашлык, разговоры
-                    и отдых большой компанией.
-                </div>
-            </div>
-
-        </div>
-
-
-        <div style="
-            display:flex;
-            gap:13px;
-            align-items:flex-start;
-            padding:13px;
-            border-radius:14px;
-            background:rgba(255,255,255,.055);
-        ">
-
-            <div style="
-                min-width:52px;
-                font-weight:750;
-            ">
-                16:00
-            </div>
-
-            <div>
-                <b>Отдых</b>
-                <div style="opacity:.68;font-size:14px;">
-                    Свободное время, природа,
-                    баня и общение.
-                </div>
-            </div>
-
-        </div>
-
-
-        <div style="
-            display:flex;
-            gap:13px;
-            align-items:flex-start;
-            padding:13px;
-            border-radius:14px;
-            background:rgba(255,255,255,.055);
-        ">
-
-            <div style="
-                min-width:52px;
-                font-weight:750;
-            ">
-                18:00
-            </div>
-
-            <div>
-                <b>Костёр и праздник</b>
-                <div style="opacity:.68;font-size:14px;">
-                    Вечер у огня, праздничный стол,
-                    тёплая атмосфера.
-                </div>
-            </div>
-
-        </div>
-
-
-        <div style="
-            display:flex;
-            gap:13px;
-            align-items:flex-start;
-            padding:13px;
-            border-radius:14px;
-            background:rgba(255,255,255,.055);
-        ">
-
-            <div style="
-                min-width:52px;
-                font-weight:750;
-            ">
-                22:00
-            </div>
-
-            <div>
-                <b>Завершение</b>
-                <div style="opacity:.68;font-size:14px;">
-                    Заканчиваем праздник.
-                    А дальше — как договоримся 😉
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
+<section class="hero" id="top">
+<div class="forest">
+    🌲 🔥 🏕️
 </div>
-    <!-- ==========================
+<div class="eyebrow">
+    Приглашение
+</div>
+<img
+    src="birthday.jpeg"
+    alt="День рождения Васи"
+    class="birthday-photo"
+    onerror="this.style.display='none';"
+>
+<h1>
+    День<br>
+    рождения Васи
+</h1>
+<p class="intro">
+    В этот раз предлагаю отметить день рождения
+    не в ресторане, а выбраться из города —
+    в лес, к озеру, костру и хорошей компании.
+</p>
+<div class="event-date">
+    📅 10 октября 2026
+</div>
+<div class="event-time">
+    ⏰ Начало в 10:00 · до 22:00
+</div>
+<div class="divider"></div>
+<div class="countdown-title">
+    До начала праздника
+</div>
+<div class="countdown" id="countdown">
+    <div class="time-box">
+        <span class="time-number" id="days">—</span>
+        <span class="time-label">дней</span>
+    </div>
+    <div class="time-box">
+        <span class="time-number" id="hours">—</span>
+        <span class="time-label">часов</span>
+    </div>
+    <div class="time-box">
+        <span class="time-number" id="minutes">—</span>
+        <span class="time-label">минут</span>
+    </div>
+    <div class="time-box">
+        <span class="time-number" id="seconds">—</span>
+        <span class="time-label">секунд</span>
+    </div>
+</div>
+<div class="program">
+    <div class="program-item">
+        <div class="program-time">10:00</div>
+        <div class="program-title">Встречаемся</div>
+    </div>
+    <div class="program-item">
+        <div class="program-time">11:00</div>
+        <div class="program-title">Лес и прогулка</div>
+    </div>
+    <div class="program-item">
+        <div class="program-time">13:00</div>
+        <div class="program-title">Пикник</div>
+    </div>
+    <div class="program-item">
+        <div class="program-time">16:00</div>
+        <div class="program-title">Отдых</div>
+    </div>
+    <div class="program-item">
+        <div class="program-time">18:00</div>
+        <div class="program-title">Костёр</div>
+    </div>
+    <div class="program-item">
+        <div class="program-time">22:00</div>
+        <div class="program-title">Завершение</div>
+    </div>
+</div>
+<p class="message">
+    Буду рад провести этот день вместе —
+    погулять по лесу, пообщаться, вкусно поесть,
+    посидеть у огня и просто хорошо провести время.
+</p>
+</section>
+<!-- ==========================
+     DAY PLAN
+=========================== -->
+<section class="section" id="plan">
+<h2>
+    🕙 План дня
+</h2>
+<p class="section-intro">
+    Ориентировочно — без строгого расписания 😊
+</p>
+<div class="timeline">
+    <div class="timeline-item">
+        <div class="timeline-time">10:00</div>
+        <div>
+            <div class="timeline-title">
+                Встречаемся
+            </div>
+            <div class="timeline-text">
+                Приезжаем, знакомимся, размещаемся
+                и начинаем отдыхать.
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-time">11:00</div>
+        <div>
+            <div class="timeline-title">
+                Лес и прогулка
+            </div>
+            <div class="timeline-text">
+                Гуляем, отдыхаем на природе,
+                фотографируемся.
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-time">13:00</div>
+        <div>
+            <div class="timeline-title">
+                Пикник
+            </div>
+            <div class="timeline-text">
+                Еда, шашлык, разговоры
+                и отдых большой компанией.
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-time">16:00</div>
+        <div>
+            <div class="timeline-title">
+                Отдых
+            </div>
+            <div class="timeline-text">
+                Свободное время, природа,
+                баня и общение.
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-time">18:00</div>
+        <div>
+            <div class="timeline-title">
+                Костёр и праздник
+            </div>
+            <div class="timeline-text">
+                Вечер у огня, праздничный стол
+                и тёплая атмосфера.
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-time">22:00</div>
+        <div>
+            <div class="timeline-title">
+                Завершение
+            </div>
+            <div class="timeline-text">
+                Заканчиваем праздник.
+                А дальше — как договоримся 😉
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- ==========================
      WHATSAPP
 =========================== -->
-
-<div class="section">
-
-    <h2>
-        💬 Обсуждаем всё в WhatsApp
-    </h2>
-
-    <p style="
-        margin-top: -4px;
-        margin-bottom: 16px;
-        opacity: .72;
-        font-size: 15px;
-        line-height: 1.55;
-    ">
-        Здесь будем обсуждать детали поездки,
-        транспорт, еду и всё остальное,
-        что понадобится перед праздником 😊
-    </p>
-
+<section class="section whatsapp-card" id="whatsapp">
+<div class="whatsapp-icon">
+    💬
+</div>
+<h2>
+    Обсуждаем всё в WhatsApp
+</h2>
+<p class="whatsapp-description">
+    Здесь будем обсуждать детали поездки,
+    транспорт, еду и всё остальное,
+    что понадобится перед праздником.
+</p>
+<a
+    class="button primary"
+    href="https://chat.whatsapp.com/IFdvLcc4kXr2IqclBzXVLH?mode=gi_t"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    💚 Присоединиться к группе
+</a>
+</section>
+<!-- ==========================
+     LOCATION
+=========================== -->
+<section class="section" id="location">
+<h2>
+    📍 Где встречаемся
+</h2>
+<div class="place-name">
+    Greenvald Park Scandinavia
+</div>
+<p class="address">
+    Ленинградская область,<br>
+    Выборгский район,<br>
+    Первомайское сельское поселение,<br>
+    посёлок Горки,<br>
+    ул. Озёрная, 1А
+</p>
+<div class="buttons">
     <a
         class="button primary"
-        href="https://chat.whatsapp.com/IFdvLcc4kXr2IqclBzXVLH?mode=gi_t"
+        href="https://yandex.ru/navi/org/grinvald_park_skandinaviya/1298055490?si=53wuhxr1hhj53rnfh7q15jc4fw"
         target="_blank"
-        rel="noopener"
-        style="
-            display:block;
-            text-align:center;
-            font-size:16px;
-            padding:15px 18px;
-        "
+        rel="noopener noreferrer"
     >
-        💚 Присоединиться к группе
+        🧭 Яндекс Навигатор
     </a>
-
-    <p style="
-        margin:12px 0 0;
-        text-align:center;
-        opacity:.5;
-        font-size:12px;
-    ">
-        WhatsApp · группа праздника
-    </p>
-
+    <a
+        class="button"
+        href="https://yandex.ru/maps/?ll=29.744828%2C60.287649&z=15&pt=29.744828%2C60.287649"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        🗺️ Яндекс Карты
+    </a>
 </div>
-    <!-- ==========================
-         МЕСТО
-    =========================== -->
-
-    <div class="section">
-
-        <h2>
-            📍 Где встречаемся
-        </h2>
-
-        <div class="place-name">
-            Greenvald Park Scandinavia
-        </div>
-
-        <p class="address">
-            Ленинградская область,<br>
-            Выборгский район,<br>
-            Первомайское сельское поселение,<br>
-            посёлок Горки,<br>
-            ул. Озёрная, 1А
-        </p>
-
-
-        <div class="buttons">
-
-            <a
-                class="button primary"
-                href="https://yandex.ru/navi/org/grinvald_park_skandinaviya/1298055490?si=53wuhxr1hhj53rnfh7q15jc4fw"
-                target="_blank"
-                rel="noopener"
-            >
-                🧭 Яндекс Навигатор
-            </a>
-
-
-            <a
-                class="button"
-                href="https://yandex.ru/maps/?ll=29.744828%2C60.287649&z=15&pt=29.744828%2C60.287649"
-                target="_blank"
-                rel="noopener"
-            >
-                🗺️ Яндекс Карты
-            </a>
-
-        </div>
-
-
-        <!-- КАРТА -->
-
-        <div class="map-wrapper">
-
-            <iframe
-                class="map"
-                loading="lazy"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=29.725%2C60.275%2C29.765%2C60.300&layer=mapnik&marker=60.287649%2C29.744828"
-                title="Карта Greenvald Park Scandinavia"
-            ></iframe>
-
-        </div>
-
-
-        <div class="coordinates">
-            📌 60.287649, 29.744828
-        </div>
-
-    </div>
-
-
-    <!-- ==========================
-         ЧТО ВЗЯТЬ
-    =========================== -->
-
-    <div class="section">
-
-        <h2>
-            🎒 Что взять с собой
-        </h2>
-
-        <ul>
-
-            <li>
-                удобную обувь для прогулки;
-            </li>
-
-            <li>
-                тёплую одежду — октябрь всё-таки;
-            </li>
-
-            <li>
-                дождевик или другую защиту от дождя;
-            </li>
-
-            <li>
-                телефон и зарядку / power bank;
-            </li>
-
-            <li>
-                хорошее настроение 😊
-            </li>
-
-        </ul>
-
-    </div>
-
-
-    <!-- ==========================
-         МЕСТО
-    =========================== -->
-
-    <div class="section">
-
-        <h2>
-            🌲 О месте
-        </h2>
-
-        <p>
-            Нас ждёт отдых среди леса и озёр
-            в <b>Greenvald Park Scandinavia</b>.
-        </p>
-
-        <p>
-            Здесь можно гулять, отдыхать на природе,
-            пользоваться инфраструктурой базы,
-            а главное — провести день вместе,
-            без городской суеты.
-        </p>
-
-
-        <div class="buttons">
-
-            <a
-                class="button primary"
-                href="https://park-scandinavia.ru"
-                target="_blank"
-                rel="noopener"
-            >
-                🌐 Сайт базы
-            </a>
-
-
-            <a
-                class="button"
-                href="https://yandex.ru/navi/org/grinvald_park_skandinaviya/1298055490?si=53wuhxr1hhj53rnfh7q15jc4fw"
-                target="_blank"
-                rel="noopener"
-            >
-                🚗 Построить маршрут
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- ==========================
-         ДОПОЛНИТЕЛЬНЫЕ КНОПКИ
-    =========================== -->
-
-    <div class="section">
-
-        <h2>
-            📱 Полезное
-        </h2>
-
-        <div class="buttons">
-
-            <button
-                class="button"
-                type="button"
-                onclick="addToCalendar()"
-            >
-                📅 В календарь
-            </button>
-
-
-            <button
-                class="button"
-                type="button"
-                onclick="copyAddress()"
-            >
-                📋 Скопировать адрес
-            </button>
-
-
-            <button
-                class="button"
-                type="button"
-                onclick="sharePage()"
-            >
-                📤 Поделиться
-            </button>
-
-
-            <a
-                class="button"
-                href="#top"
-                onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"
-            >
-                ⬆️ В начало
-            </a>
-
-        </div>
-
-
-        <div
-            id="status"
-            class="status"
-        ></div>
-
-    </div>
-
-
-    <!-- ==========================
-         ФИНАЛ
-    =========================== -->
-
-    <div class="divider"></div>
-
-
-    <div class="eyebrow">
-        10.10.2026 · 10:00
-    </div>
-
-
-    <h2 style="
-        margin: 12px 0 8px;
-        font-size: 27px;
-    ">
-        Буду ждать тебя! ❤️
-    </h2>
-
-
-    <p style="
-        margin: 0;
-        opacity: .75;
-    ">
-        Хорошая компания · природа · костёр · праздник
-    </p>
-
-
-    <div class="footer">
-        Vasya's Birthday · Greenvald Park Scandinavia
-    </div>
-
+<div class="map-wrapper">
+    <iframe
+        class="map"
+        loading="lazy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=29.725%2C60.275%2C29.765%2C60.300&layer=mapnik&marker=60.287649%2C29.744828"
+        title="Карта Greenvald Park Scandinavia">
+    </iframe>
 </div>
-
+<div class="coordinates">
+    📌 60.287649, 29.744828
+</div>
 </section>
-
+<!-- ==========================
+     WHAT TO TAKE
+=========================== -->
+<section class="section" id="packing">
+<h2>
+    🎒 Что взять с собой
+</h2>
+<p class="section-intro">
+    Октябрь — лучше взять немного больше тёплых вещей,
+    чем потом искать их у костра 😊
+</p>
+<div class="pack-grid">
+    <div class="pack-card">
+        <div class="pack-icon">🥾</div>
+        <div class="pack-title">
+            Удобная обувь
+        </div>
+        <div class="pack-text">
+            Для прогулок по лесу и территории.
+        </div>
+    </div>
+    <div class="pack-card">
+        <div class="pack-icon">🧥</div>
+        <div class="pack-title">
+            Тёплая одежда
+        </div>
+        <div class="pack-text">
+            Особенно для вечера у костра.
+        </div>
+    </div>
+    <div class="pack-card">
+        <div class="pack-icon">🌧️</div>
+        <div class="pack-title">
+            Защита от дождя
+        </div>
+        <div class="pack-text">
+            Дождевик или непромокаемая куртка.
+        </div>
+    </div>
+    <div class="pack-card">
+        <div class="pack-icon">🔋</div>
+        <div class="pack-title">
+            Power bank
+        </div>
+        <div class="pack-text">
+            Телефон понадобится для связи и фото.
+        </div>
+    </div>
+    <div class="pack-card">
+        <div class="pack-icon">🩴</div>
+        <div class="pack-title">
+            Для бани
+        </div>
+        <div class="pack-text">
+            Если планируешь пользоваться баней.
+        </div>
+    </div>
+    <div class="pack-card">
+        <div class="pack-icon">😊</div>
+        <div class="pack-title">
+            Хорошее настроение
+        </div>
+        <div class="pack-text">
+            Это самое главное.
+        </div>
+    </div>
 </div>
-
-
+</section>
+<!-- ==========================
+     ABOUT PLACE
+=========================== -->
+<section class="section" id="about">
+<h2>
+    🌲 О месте
+</h2>
+<p class="about-text">
+    Нас ждёт отдых среди леса и озёр
+    в <b>Greenvald Park Scandinavia</b>.
+</p>
+<p class="about-text">
+    Можно гулять, отдыхать на природе,
+    пользоваться инфраструктурой базы,
+    а главное — провести день вместе,
+    без городской суеты.
+</p>
+<div class="buttons">
+    <a
+        class="button primary"
+        href="https://park-scandinavia.ru"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        🌐 Сайт базы
+    </a>
+    <a
+        class="button"
+        href="https://yandex.ru/navi/org/grinvald_park_skandinaviya/1298055490?si=53wuhxr1hhj53rnfh7q15jc4fw"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        🚗 Построить маршрут
+    </a>
+</div>
+</section>
+<!-- ==========================
+     USEFUL
+=========================== -->
+<section class="section" id="useful">
+<h2>
+    📱 Полезное
+</h2>
+<div class="utility-grid">
+    <button
+        class="button"
+        type="button"
+        onclick="addToCalendar()"
+    >
+        📅 В календарь
+    </button>
+    <button
+        class="button"
+        type="button"
+        onclick="copyAddress()"
+    >
+        📋 Скопировать адрес
+    </button>
+    <button
+        class="button"
+        type="button"
+        onclick="sharePage()"
+    >
+        📤 Поделиться
+    </button>
+    <button
+        class="button"
+        type="button"
+        onclick="scrollToTop()"
+    >
+        ⬆️ В начало
+    </button>
+</div>
+<div
+    id="status"
+    class="status"
+    aria-live="polite">
+</div>
+</section>
+<!-- ==========================
+     FINAL
+=========================== -->
+<section class="final">
+<div class="eyebrow">
+    10.10.2026 · 10:00
+</div>
+<div class="final-title">
+    Буду ждать тебя! ❤️
+</div>
+<p class="final-subtitle">
+    Хорошая компания · природа · костёр · праздник
+</p>
+<div class="footer">
+    Vasya's Birthday · Greenvald Park Scandinavia
+</div>
+</section>
+</div>
+</div>
+<!-- ==========================
+     MOBILE BOTTOM BAR
+=========================== -->
+<div class="bottom-bar">
+<a
+    class="bottom-button whatsapp"
+    href="https://chat.whatsapp.com/IFdvLcc4kXr2IqclBzXVLH?mode=gi_t"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    💬 WhatsApp
+</a>
+<a
+    class="bottom-button top"
+    href="#location"
+>
+    📍 Место
+</a>
+</div>
 <script>
-
-    /* =================================
-       ОБРАТНЫЙ ОТСЧЁТ
-       10 октября 2026, 10:00 МСК
-    ================================= */
-
-    const eventDate =
-        new Date("2026-10-10T10:00:00+03:00").getTime();
-
-
-    function updateCountdown() {
-
-        const now =
-            Date.now();
-
-        const difference =
-            eventDate - now;
-
-
-        const countdown =
-            document.getElementById("countdown");
-
-
-        if (difference <= 0) {
-
-            countdown.innerHTML = `
-                <div
-                    class="count"
-                    style="grid-column:1/-1;padding:17px;"
-                >
-                    <strong>
-                        🎉 Праздник начался!
-                    </strong>
-
-                    <small>
-                        До встречи!
-                    </small>
-                </div>
-            `;
-
-            return;
-        }
-
-
-        const days =
-            Math.floor(
-                difference / 86400000
-            );
-
-
-        const hours =
-            Math.floor(
-                (difference % 86400000)
-                / 3600000
-            );
-
-
-        const minutes =
-            Math.floor(
-                (difference % 3600000)
-                / 60000
-            );
-
-
-        const seconds =
-            Math.floor(
-                (difference % 60000)
-                / 1000
-            );
-
-
-        document.getElementById("days")
-            .textContent = days;
-
-
-        document.getElementById("hours")
-            .textContent =
-            String(hours).padStart(2, "0");
-
-
-        document.getElementById("minutes")
-            .textContent =
-            String(minutes).padStart(2, "0");
-
-
-        document.getElementById("seconds")
-            .textContent =
-            String(seconds).padStart(2, "0");
-
+/* ==========================
+   COUNTDOWN
+=========================== */
+const eventDate =
+    new Date("2026-10-10T10:00:00+03:00").getTime();
+function updateCountdown(){
+    const now = Date.now();
+    const distance = eventDate - now;
+    const days =
+        document.getElementById("days");
+    const hours =
+        document.getElementById("hours");
+    const minutes =
+        document.getElementById("minutes");
+    const seconds =
+        document.getElementById("seconds");
+    if(distance <= 0){
+        days.textContent = "0";
+        hours.textContent = "0";
+        minutes.textContent = "0";
+        seconds.textContent = "0";
+        return;
     }
-
-
-    updateCountdown();
-
-    setInterval(
-        updateCountdown,
+    const totalSeconds =
+        Math.floor(distance / 1000);
+    const d =
+        Math.floor(totalSeconds / 86400);
+    const h =
+        Math.floor((totalSeconds % 86400) / 3600);
+    const m =
+        Math.floor((totalSeconds % 3600) / 60);
+    const s =
+        totalSeconds % 60;
+    days.textContent = d;
+    hours.textContent = String(h).padStart(2,"0");
+    minutes.textContent = String(m).padStart(2,"0");
+    seconds.textContent = String(s).padStart(2,"0");
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+/* ==========================
+   CALENDAR
+=========================== */
+function addToCalendar(){
+    const ics = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Vasya Birthday//RU",
+        "CALSCALE:GREGORIAN",
+        "BEGIN:VEVENT",
+        "UID:vasya-birthday-2026@example.com",
+        "DTSTAMP:20260101T000000Z",
+        "DTSTART:20261010T070000Z",
+        "DTEND:20261010T190000Z",
+        "SUMMARY:День рождения Васи",
+        "LOCATION:Greenvald Park Scandinavia, Ленинградская область, Выборгский район, посёлок Горки",
+        "DESCRIPTION:День рождения Васи. Лес, пикник, прогулка, костёр и хорошая компания.",
+        "END:VEVENT",
+        "END:VCALENDAR"
+    ].join("\r\n");
+    const blob =
+        new Blob(
+            [ics],
+            {type:"text/calendar;charset=utf-8"}
+        );
+    const url =
+        URL.createObjectURL(blob);
+    const link =
+        document.createElement("a");
+    link.href = url;
+    link.download = "vasya-birthday-2026.ics";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(
+        () => URL.revokeObjectURL(url),
         1000
     );
-
-
-    /* =================================
-       ДОБАВИТЬ В КАЛЕНДАРЬ
-    ================================= */
-
-    function addToCalendar() {
-
-        const start =
-            "20261010T070000Z";
-
-        const end =
-            "20261010T190000Z";
-
-
-        const ics =
-`BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Vasya Birthday//RU
-BEGIN:VEVENT
-UID:vasya-birthday-20261010@birthday
-DTSTAMP:20261001T000000Z
-DTSTART:${start}
-DTEND:${end}
-SUMMARY:День рождения Васи
-DESCRIPTION:День рождения Васи в Greenvald Park Scandinavia. Пикник, природа, костёр и хорошая компания.
-LOCATION:Greenvald Park Scandinavia, Ленинградская область, Выборгский район, посёлок Горки, ул. Озёрная, 1А
-GEO:60.287649;29.744828
-END:VEVENT
-END:VCALENDAR`;
-
-
-        const blob =
-            new Blob(
-                [ics],
-                {
-                    type:
-                        "text/calendar;charset=utf-8"
-                }
-            );
-
-
-        const url =
-            URL.createObjectURL(blob);
-
-
-        const link =
-            document.createElement("a");
-
-
-        link.href = url;
-
-        link.download =
-            "vasya-birthday-10-10-2026.ics";
-
-
-        document.body.appendChild(link);
-
-        link.click();
-
-        document.body.removeChild(link);
-
-        URL.revokeObjectURL(url);
-
-
-        showStatus(
-            "📅 Файл календаря подготовлен"
-        );
-    }
-
-
-    /* =================================
-       КОПИРОВАНИЕ АДРЕСА
-    ================================= */
-
-    function copyAddress() {
-
-        const address =
-`Greenvald Park Scandinavia
-Ленинградская область,
-Выборгский район,
-Первомайское сельское поселение,
-посёлок Горки,
-ул. Озёрная, 1А
-
-Координаты:
-60.287649, 29.744828`;
-
-
-        if (
-            navigator.clipboard &&
-            navigator.clipboard.writeText
-        ) {
-
-            navigator.clipboard.writeText(address)
-                .then(() => {
-
-                    showStatus(
-                        "📋 Адрес скопирован"
-                    );
-
-                })
-                .catch(() => {
-
-                    showStatus(
-                        "Не удалось скопировать адрес"
-                    );
-
-                });
-
-        } else {
-
-            showStatus(
-                "Скопируй адрес вручную из блока выше"
-            );
-
-        }
-
-    }
-
-
-    /* =================================
-       ПОДЕЛИТЬСЯ
-    ================================= */
-
-    async function sharePage() {
-
-        const shareData = {
-
-            title:
-                "День рождения Васи · 10 октября 2026",
-
-            text:
-                "Приглашаю на мой день рождения! 10 октября 2026 года, Greenvald Park Scandinavia.",
-
-            url:
-                window.location.href
-
-        };
-
-
-        if (
-            navigator.share
-        ) {
-
-            try {
-
-                await navigator.share(
-                    shareData
-                );
-
-            } catch (error) {
-
-                /* Пользователь закрыл окно
-                   общего доступа — ничего не делаем */
-
-            }
-
-        } else {
-
-            copyPageLink();
-
-        }
-
-    }
-
-
-    /* =================================
-       КОПИРОВАНИЕ ССЫЛКИ
-    ================================= */
-
-    function copyPageLink() {
-
-        if (
-            navigator.clipboard
-        ) {
-
-            navigator.clipboard.writeText(
-                window.location.href
-            )
+    showStatus("📅 Файл календаря подготовлен");
+}
+/* ==========================
+   COPY ADDRESS
+=========================== */
+function copyAddress(){
+    const address =
+        "Greenvald Park Scandinavia, " +
+        "Ленинградская область, " +
+        "Выборгский район, " +
+        "Первомайское сельское поселение, " +
+        "посёлок Горки, ул. Озёрная, 1А";
+    if(navigator.clipboard){
+        navigator.clipboard
+            .writeText(address)
             .then(() => {
-
-                showStatus(
-                    "🔗 Ссылка на приглашение скопирована"
-                );
-
+                showStatus("📋 Адрес скопирован");
+            })
+            .catch(() => {
+                fallbackCopy(address);
             });
-
-        } else {
-
-            showStatus(
-                "Скопируй ссылку из адресной строки"
-            );
-
+    }else{
+        fallbackCopy(address);
+    }
+}
+/* ==========================
+   FALLBACK COPY
+=========================== */
+function fallbackCopy(text){
+    const textarea =
+        document.createElement("textarea");
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    try{
+        document.execCommand("copy");
+        showStatus("📋 Адрес скопирован");
+    }catch(e){
+        showStatus("Не удалось скопировать адрес");
+    }
+    textarea.remove();
+}
+/* ==========================
+   SHARE
+=========================== */
+async function sharePage(){
+    const shareData = {
+        title:"День рождения Васи",
+        text:
+            "Приглашаю на мой день рождения " +
+            "10 октября 2026 года 🌲🔥",
+        url:window.location.href
+    };
+    if(navigator.share){
+        try{
+            await navigator.share(shareData);
+        }catch(error){
+            if(error.name !== "AbortError"){
+                copyPageLink();
+            }
         }
-
+    }else{
+        copyPageLink();
     }
-
-
-    /* =================================
-       СООБЩЕНИЕ
-    ================================= */
-
-    function showStatus(message) {
-
-        const status =
-            document.getElementById("status");
-
-
-        status.textContent =
-            message;
-
-
-        status.style.display =
-            "block";
-
-
-        clearTimeout(
-            window.statusTimer
-        );
-
-
-        window.statusTimer =
-            setTimeout(
-                () => {
-
-                    status.style.display =
-                        "none";
-
-                },
-                3000
-            );
-
+}
+/* ==========================
+   COPY PAGE LINK
+=========================== */
+function copyPageLink(){
+    const url =
+        window.location.href;
+    if(navigator.clipboard){
+        navigator.clipboard
+            .writeText(url)
+            .then(() => {
+                showStatus("🔗 Ссылка скопирована");
+            });
+    }else{
+        fallbackCopy(url);
     }
-
+}
+/* ==========================
+   STATUS
+=========================== */
+function showStatus(message){
+    const status =
+        document.getElementById("status");
+    status.textContent = message;
+    clearTimeout(window.statusTimer);
+    window.statusTimer =
+        setTimeout(() => {
+            status.textContent = "";
+        },3500);
+}
+/* ==========================
+   SCROLL TOP
+=========================== */
+function scrollToTop(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
 </script>
-
 </body>
 </html>
