@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Вася | День рождения</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Arial, sans-serif;
+            background: #102018;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 18px;
+            background:
+                linear-gradient(
+                    rgba(10, 25, 17, 0.68),
+                    rgba(10, 25, 17, 0.82)
+                ),
+                radial-gradient(circle at top, #456b4b, #102018 65%);
+        }
+
+        .card {
+            width: 100%;
+            max-width: 720px;
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            border-radius: 28px;
+            padding: 38px 28px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+        }
+
+        .forest {
+            font-size: 54px;
+            margin-bottom: 10px;
+        }
+
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 13px;
+            opacity: 0.75;
+        }
+
+        h1 {
+            font-size: clamp(38px, 8vw, 68px);
+            line-height: 1.05;
+            margin: 12px 0;
+        }
+
+        .subtitle {
+            font-size: 21px;
+            margin: 0 auto 30px;
+            max-width: 560px;
+            opacity: 0.92;
+        }
+
+        .place {
+            font-size: 25px;
+            font-weight: 700;
+            margin: 25px 0 8px;
+        }
+
+        .location {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 2px;
+            margin: 30px auto;
+            background: rgba(255,255,255,0.5);
+        }
+
+        .program {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .item {
+            padding: 18px 10px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.10);
+            font-size: 17px;
+        }
+
+        .item span {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .message {
+            font-size: 18px;
+            margin: 30px auto;
+            max-width: 570px;
+        }
+
+        .date {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 12px 22px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.14);
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 550px) {
+            .card {
+                padding: 30px 18px;
+            }
+
+            .program {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .item {
+                font-size: 15px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <div class="card">
+
+        <div class="forest">🌲🔥🏕️</div>
+
+        <div class="small-title">
+            Приглашение
+        </div>
+
+        <h1>День рождения Васи</h1>
+
+        <p class="subtitle">
+            Предлагаю отметить мой день рождения
+            не в ресторане, а на природе —
+            с костром, шашлыком и хорошей компанией.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="place">
+            Greenvald Park Scandinavia
+        </div>
+
+        <div class="location">
+            Ленинградская область<br>
+            Выборгский район<br>
+            посёлок Первомайское, деревня Горки
+        </div>
+
+        <div class="date">
+            📅 Дата: [УКАЖЕМ ДАТУ]
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="program">
+
+            <div class="item">
+                <span>🏕️</span>
+                Кемпинг
+            </div>
+
+            <div class="item">
+                <span>🔥</span>
+                Костёр
+            </div>
+
+            <div class="item">
+                <span>🥩</span>
+                Шашлык
+            </div>
+
+            <div class="item">
+                <span>🧖</span>
+                Баня
+            </div>
+
+            <div class="item">
+                <span>🌲</span>
+                Прогулка
+            </div>
+
+            <div class="item">
+                <span>🥂</span>
+                Праздник
+            </div>
+
+        </div>
+
+        <p class="message">
+            Буду рад провести этот день вместе —
+            выбраться из города, погулять по лесу,
+            пожарить мясо, сходить в баню
+            и просто хорошо провести время.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="small-title">
+            Буду ждать тебя! ❤️
+        </div>
+
+        <div class="footer">
+            Vasya's Birthday Camping Trip
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
