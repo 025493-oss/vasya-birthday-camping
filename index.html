@@ -1,1110 +1,1836 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#102018">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>День рождения Васи · 10 октября 2026</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1510">
+<meta name="description" content="День рождения Васи — 10 октября 2026, Greenvald Park Scandinavia">
+<title>Вася — 38! 🏕️</title>
+
 <style>
 :root{
-    --bg:#0b1510;
-    --bg2:#102018;
-    --card:#14261c;
-    --card2:#193023;
-    --text:#f4f5ef;
-    --muted:rgba(244,245,239,.68);
-    --muted2:rgba(244,245,239,.48);
-    --accent:#a8d5a2;
-    --accent2:#d2e8bd;
-    --line:rgba(255,255,255,.09);
-    --shadow:0 18px 60px rgba(0,0,0,.32);
-    --radius:24px;
+  --bg:#0b1510;
+  --bg2:#102018;
+  --card:#14261c;
+  --card2:#193021;
+  --text:#f4f5ef;
+  --muted:#b8c4b9;
+  --accent:#a8d5a2;
+  --line:#294233;
+  --danger:#e8a6a6;
+  --shadow:0 12px 35px #0005;
 }
-*{
-    box-sizing:border-box;
-}
-html{
-    scroll-behavior:smooth;
-}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
 body{
-    margin:0;
-    min-width:320px;
-    background:
-        radial-gradient(circle at 20% 0%, rgba(105,145,111,.18), transparent 32%),
-        radial-gradient(circle at 90% 20%, rgba(72,111,83,.14), transparent 30%),
-        var(--bg);
-    color:var(--text);
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "SF Pro Display",
-        "SF Pro Text",
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),var(--bg2));
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  line-height:1.5;
 }
-a{
-    color:inherit;
-    text-decoration:none;
+
+a{color:inherit}
+
+.wrap{
+  max-width:900px;
+  margin:auto;
+  padding:18px 16px 100px;
 }
-button{
-    font:inherit;
-}
-.page{
-    width:100%;
-    max-width:760px;
-    margin:0 auto;
-    padding:18px 14px 100px;
-}
-.hero-card{
-    overflow:hidden;
-    border:1px solid var(--line);
-    border-radius:30px;
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,.045),
-            rgba(255,255,255,.015)
-        ),
-        var(--bg2);
-    box-shadow:var(--shadow);
-}
+
 .hero{
-    padding:24px 18px 22px;
-    text-align:center;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:var(--card);
+  box-shadow:var(--shadow);
 }
-.forest{
-    font-size:27px;
-    letter-spacing:4px;
-    margin-bottom:10px;
+
+.hero img{
+  width:100%;
+  display:block;
+  max-height:460px;
+  object-fit:cover;
 }
+
+.heroText{
+  padding:24px;
+  text-align:center;
+}
+
 .eyebrow{
-    font-size:12px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:var(--accent);
-    font-weight:700;
+  color:var(--accent);
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:13px;
 }
-.birthday-photo{
-    display:block;
-    width:100%;
-    max-height:470px;
-    object-fit:cover;
-    border-radius:22px;
-    margin:18px auto 22px;
-    border:1px solid rgba(255,255,255,.08);
-    box-shadow:0 15px 45px rgba(0,0,0,.28);
+
+.hero h1{
+  font-size:clamp(34px,8vw,62px);
+  line-height:1.02;
+  margin:8px 0;
 }
-h1{
-    margin:0;
-    font-size:clamp(39px,10vw,70px);
-    line-height:.98;
-    letter-spacing:-2.5px;
-    font-weight:800;
+
+.hero p{
+  margin:7px 0;
+  color:var(--muted);
+  font-size:18px;
 }
-.intro{
-    max-width:610px;
-    margin:20px auto 0;
-    color:var(--muted);
-    font-size:16px;
+
+.count{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin-top:20px;
 }
-.event-date{
-    margin-top:25px;
-    font-size:22px;
-    font-weight:800;
+
+.count div{
+  background:#0d1a13;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:10px;
 }
-.event-time{
-    margin-top:5px;
-    color:var(--muted);
-    font-size:15px;
+
+.count b{
+  display:block;
+  font-size:24px;
 }
-.divider{
-    height:1px;
-    background:var(--line);
-    margin:25px 0;
+
+.count span{
+  font-size:11px;
+  color:var(--muted);
 }
-.countdown-title{
-    color:var(--muted2);
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:1.5px;
-    font-weight:700;
+
+section{
+  margin-top:18px;
 }
-.countdown{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:8px;
-    margin-top:12px;
-}
-.time-box{
-    padding:13px 5px;
-    border-radius:16px;
-    background:rgba(255,255,255,.055);
-    border:1px solid rgba(255,255,255,.05);
-}
-.time-number{
-    display:block;
-    font-size:24px;
-    font-weight:800;
-    line-height:1.05;
-}
-.time-label{
-    display:block;
-    margin-top:5px;
-    font-size:10px;
-    color:var(--muted2);
-    text-transform:uppercase;
-    letter-spacing:.8px;
-}
+
 .section{
-    margin-top:16px;
-    padding:20px;
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    background:rgba(255,255,255,.035);
-    scroll-margin-top:20px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:20px;
+  box-shadow:0 8px 25px #0002;
 }
+
 .section h2{
-    margin:0 0 15px;
-    font-size:22px;
-    line-height:1.2;
-    letter-spacing:-.4px;
+  margin:0 0 14px;
+  font-size:25px;
 }
-.section-intro{
-    margin:-4px 0 16px;
-    color:var(--muted);
-    font-size:14px;
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
 }
-.message{
-    margin:18px 4px 4px;
-    color:var(--muted);
-    font-size:15px;
-    text-align:center;
+
+.card{
+  background:var(--card2);
+  border:1px solid var(--line);
+  border-radius:17px;
+  padding:16px;
 }
-/* PROGRAM */
-.program{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:9px;
-    margin-top:22px;
+
+.card h3{
+  margin:0 0 6px;
 }
-.program-item{
-    min-height:88px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:11px 8px;
-    border-radius:16px;
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.05);
+
+.muted{
+  color:var(--muted);
 }
-.program-time{
-    font-weight:800;
-    color:var(--accent2);
-    font-size:15px;
-}
-.program-title{
-    margin-top:4px;
-    font-size:12px;
-    line-height:1.25;
-    color:var(--muted);
-}
-/* DAY PLAN */
+
 .timeline{
-    position:relative;
-    display:grid;
-    gap:10px;
+  display:grid;
+  gap:10px;
 }
-.timeline-item{
-    display:grid;
-    grid-template-columns:58px 1fr;
-    gap:12px;
-    align-items:start;
-    padding:13px;
-    border-radius:16px;
-    background:rgba(255,255,255,.045);
-    border:1px solid rgba(255,255,255,.045);
+
+.timeRow{
+  display:grid;
+  grid-template-columns:80px 1fr;
+  gap:12px;
+  padding:12px;
+  border-bottom:1px solid var(--line);
 }
-.timeline-time{
-    font-size:14px;
-    font-weight:800;
-    color:var(--accent2);
-    padding-top:1px;
+
+.timeRow:last-child{
+  border-bottom:0;
 }
-.timeline-title{
-    font-weight:750;
-    font-size:15px;
+
+.time{
+  color:var(--accent);
+  font-weight:800;
 }
-.timeline-text{
-    margin-top:3px;
-    color:var(--muted);
-    font-size:13px;
-    line-height:1.45;
+
+.btns{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
 }
-/* WHATSAPP */
-.whatsapp-card{
-    background:
-        linear-gradient(
-            135deg,
-            rgba(125,181,116,.14),
-            rgba(255,255,255,.035)
-        );
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:11px 16px;
+  border-radius:13px;
+  text-decoration:none;
+  border:1px solid var(--line);
+  background:#193021;
+  color:var(--text);
+  font-weight:750;
+  cursor:pointer;
 }
-.whatsapp-icon{
-    font-size:31px;
-    margin-bottom:5px;
+
+.btn.primary{
+  background:var(--accent);
+  color:#102014;
+  border-color:var(--accent);
 }
-.whatsapp-description{
-    margin:0 0 17px;
-    color:var(--muted);
-    font-size:14px;
+
+.btn.full{
+  width:100%;
 }
-/* PLACE */
-.place-name{
-    font-size:20px;
-    font-weight:800;
-    margin-bottom:8px;
+
+.wa{
+  background:linear-gradient(135deg,#193a28,#173022);
+  border-color:#356247;
 }
+
+.wa strong{
+  font-size:19px;
+}
+
 .address{
-    margin:0;
-    color:var(--muted);
-    font-size:14px;
-    line-height:1.6;
+  background:#0d1a13;
+  border:1px dashed var(--line);
+  padding:14px;
+  border-radius:14px;
+  margin:10px 0 14px;
 }
-.coordinates{
-    margin-top:10px;
-    color:var(--muted2);
-    font-size:11px;
-    text-align:center;
-}
-/* BUTTONS */
-.buttons{
-    display:grid;
-    gap:10px;
-    margin-top:17px;
-}
-.button{
-    min-height:50px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:100%;
-    padding:13px 16px;
-    border:1px solid rgba(255,255,255,.10);
-    border-radius:15px;
-    background:rgba(255,255,255,.055);
-    color:var(--text);
-    font-size:15px;
-    font-weight:700;
-    cursor:pointer;
-    transition:
-        transform .15s ease,
-        background .15s ease;
-    -webkit-tap-highlight-color:transparent;
-}
-.button:active{
-    transform:scale(.98);
-}
-.button.primary{
-    background:var(--accent);
-    color:#102018;
-    border-color:transparent;
-}
-.button.secondary{
-    background:rgba(168,213,162,.09);
-    border-color:rgba(168,213,162,.20);
-}
-/* MAP */
-.map-wrapper{
-    overflow:hidden;
-    margin-top:17px;
-    border-radius:19px;
-    border:1px solid var(--line);
-    background:#d8ddd8;
-}
+
 .map{
-    display:block;
-    width:100%;
-    height:330px;
-    border:0;
+  width:100%;
+  height:310px;
+  border:0;
+  border-radius:16px;
+  background:#0d1a13;
 }
-/* TAKE WITH YOU */
-.pack-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:9px;
+
+/* GAMES */
+
+.gameTabs{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:7px;
+  margin-bottom:12px;
 }
-.pack-card{
-    min-height:105px;
-    padding:15px;
-    border-radius:17px;
-    background:rgba(255,255,255,.045);
-    border:1px solid rgba(255,255,255,.05);
+
+.tab{
+  border:1px solid var(--line);
+  background:#0d1a13;
+  color:var(--muted);
+  border-radius:12px;
+  padding:10px 5px;
+  cursor:pointer;
+  font-weight:750;
+  font-size:12px;
 }
-.pack-icon{
-    font-size:25px;
+
+.tab.active{
+  background:var(--accent);
+  color:#102014;
 }
-.pack-title{
-    margin-top:7px;
-    font-size:14px;
-    font-weight:750;
+
+.game{
+  display:none;
 }
-.pack-text{
-    margin-top:3px;
-    color:var(--muted2);
-    font-size:12px;
-    line-height:1.4;
+
+.game.active{
+  display:block;
 }
-/* ABOUT */
-.about-text{
-    margin:0;
-    color:var(--muted);
-    font-size:14px;
+
+.gameTitle{
+  font-size:22px;
+  font-weight:850;
+  margin-bottom:5px;
 }
-.about-text + .about-text{
-    margin-top:12px;
+
+.word{
+  font-size:clamp(32px,9vw,58px);
+  font-weight:900;
+  text-align:center;
+  padding:28px 10px;
+  border-radius:20px;
+  background:#0d1a13;
+  margin:14px 0;
 }
-/* USEFUL */
-.utility-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:9px;
+
+.score{
+  display:flex;
+  justify-content:space-between;
+  background:#0d1a13;
+  padding:12px;
+  border-radius:13px;
+  margin-bottom:10px;
 }
-/* FOOTER */
-.final{
-    padding:32px 15px 10px;
-    text-align:center;
+
+.choiceGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
 }
-.final-title{
-    margin:10px 0 6px;
-    font-size:28px;
-    line-height:1.1;
-    font-weight:800;
+
+.choice{
+  padding:13px;
+  border-radius:13px;
+  border:1px solid var(--line);
+  background:#0d1a13;
+  color:var(--text);
+  cursor:pointer;
+  text-align:left;
 }
-.final-subtitle{
-    margin:0;
-    color:var(--muted);
-    font-size:14px;
+
+.choice.correct{
+  outline:2px solid var(--accent);
 }
+
+.choice.wrong{
+  outline:2px solid var(--danger);
+}
+
+.boardWrap{
+  overflow:auto;
+  padding-bottom:5px;
+}
+
+.board{
+  display:grid;
+  grid-template-columns:28px repeat(6,38px);
+  grid-auto-rows:38px;
+  gap:3px;
+  justify-content:center;
+}
+
+.cell{
+  border:1px solid #365443;
+  background:#1a3928;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.cell.ship{
+  background:#557d5c;
+}
+
+.cell.hit{
+  background:#b86d6d;
+}
+
+.cell.miss{
+  background:#6d7d80;
+}
+
+.axis{
+  display:flex;
+  gap:7px;
+  align-items:center;
+  margin:10px 0;
+}
+
+.note{
+  padding:11px 13px;
+  background:#0d1a13;
+  border-radius:13px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.small{
+  font-size:12px;
+}
+
 .footer{
-    margin-top:24px;
-    color:var(--muted2);
-    font-size:11px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  padding:25px 0;
 }
-/* STATUS */
-.status{
-    min-height:18px;
-    margin-top:10px;
-    text-align:center;
-    color:var(--accent2);
-    font-size:12px;
+
+.top{
+  position:fixed;
+  right:14px;
+  bottom:78px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#14261ce8;
+  color:var(--text);
+  cursor:pointer;
 }
-/* BOTTOM BAR */
-.bottom-bar{
-    position:fixed;
-    z-index:50;
-    left:50%;
-    bottom:12px;
-    transform:translateX(-50%);
-    width:min(calc(100% - 24px),520px);
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:8px;
-    padding:8px;
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:20px;
-    background:rgba(12,25,17,.88);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    box-shadow:0 12px 35px rgba(0,0,0,.4);
+
+.bottom{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:9px max(10px,env(safe-area-inset-left))
+           max(9px,env(safe-area-inset-bottom));
+  background:#0b1510ed;
+  backdrop-filter:blur(12px);
+  display:flex;
+  gap:8px;
+  border-top:1px solid var(--line);
+  z-index:5;
 }
-.bottom-button{
-    min-height:45px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:13px;
-    font-size:13px;
-    font-weight:750;
+
+.bottom a{
+  flex:1;
 }
-.bottom-button.whatsapp{
-    background:#a8d5a2;
-    color:#102018;
+
+.bottom .btn{
+  min-height:42px;
+  padding:8px;
+  font-size:13px;
 }
-.bottom-button.top{
-    background:rgba(255,255,255,.07);
-    color:var(--text);
-}
-/* SMALL SCREENS */
-@media(max-width:430px){
-    .page{
-        padding:10px 9px 95px;
-    }
-    .hero{
-        padding:20px 13px 18px;
-    }
-    .hero-card{
-        border-radius:24px;
-    }
-    .birthday-photo{
-        border-radius:18px;
-        margin-top:15px;
-    }
-    h1{
-        font-size:44px;
-    }
-    .intro{
-        font-size:14px;
-    }
-    .event-date{
-        font-size:20px;
-    }
-    .program{
-        grid-template-columns:repeat(2,1fr);
-    }
-    .section{
-        padding:17px;
-        border-radius:20px;
-    }
-    .map{
-        height:285px;
-    }
-}
-@media(max-width:350px){
-    .countdown{
-        gap:5px;
-    }
-    .time-number{
-        font-size:21px;
-    }
-    .program{
-        grid-template-columns:1fr 1fr;
-    }
-    .timeline-item{
-        grid-template-columns:52px 1fr;
-    }
+
+@media(max-width:650px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .gameTabs{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .count b{
+    font-size:20px;
+  }
+
+  .heroText{
+    padding:20px;
+  }
+
+  .timeRow{
+    grid-template-columns:66px 1fr;
+  }
+
+  .map{
+    height:270px;
+  }
+
+  .wrap{
+    padding-left:11px;
+    padding-right:11px;
+  }
+
+  .section{
+    padding:16px;
+  }
+
+  .choiceGrid{
+    grid-template-columns:1fr;
+  }
+
+  .board{
+    grid-template-columns:26px repeat(6,34px);
+    grid-auto-rows:34px;
+  }
 }
 </style>
 </head>
+
 <body>
-<div class="page">
-<div class="hero-card">
-<!-- ==========================
-     HERO
-=========================== -->
-<section class="hero" id="top">
-<div class="forest">
-    🌲 🔥 🏕️
+
+<div class="wrap" id="top">
+
+<header class="hero">
+
+<img src="birthday.jpeg" alt="Вася">
+
+<div class="heroText">
+
+<div class="eyebrow">🏕️ День рождения</div>
+
+<h1>Вася — 38!</h1>
+
+<p>10 октября 2026 · 10:00–22:00</p>
+
+<p>Greenvald Park Scandinavia</p>
+
+<div class="count" id="count">
+
+<div>
+<b>—</b>
+<span>дней</span>
 </div>
-<div class="eyebrow">
-    Приглашение
+
+<div>
+<b>—</b>
+<span>часов</span>
 </div>
-<img
-    src="birthday.jpeg"
-    alt="День рождения Васи"
-    class="birthday-photo"
-    onerror="this.style.display='none';"
->
-<h1>
-    День<br>
-    рождения Васи
-</h1>
-<p class="intro">
-    В этот раз предлагаю отметить день рождения
-    не в ресторане, а выбраться из города —
-    в лес, к озеру, костру и хорошей компании.
-</p>
-<div class="event-date">
-    📅 10 октября 2026
+
+<div>
+<b>—</b>
+<span>минут</span>
 </div>
-<div class="event-time">
-    ⏰ Начало в 10:00 · до 22:00
+
+<div>
+<b>—</b>
+<span>секунд</span>
 </div>
-<div class="divider"></div>
-<div class="countdown-title">
-    До начала праздника
+
 </div>
-<div class="countdown" id="countdown">
-    <div class="time-box">
-        <span class="time-number" id="days">—</span>
-        <span class="time-label">дней</span>
-    </div>
-    <div class="time-box">
-        <span class="time-number" id="hours">—</span>
-        <span class="time-label">часов</span>
-    </div>
-    <div class="time-box">
-        <span class="time-number" id="minutes">—</span>
-        <span class="time-label">минут</span>
-    </div>
-    <div class="time-box">
-        <span class="time-number" id="seconds">—</span>
-        <span class="time-label">секунд</span>
-    </div>
 </div>
-<div class="program">
-    <div class="program-item">
-        <div class="program-time">10:00</div>
-        <div class="program-title">Встречаемся</div>
-    </div>
-    <div class="program-item">
-        <div class="program-time">11:00</div>
-        <div class="program-title">Лес и прогулка</div>
-    </div>
-    <div class="program-item">
-        <div class="program-time">13:00</div>
-        <div class="program-title">Пикник</div>
-    </div>
-    <div class="program-item">
-        <div class="program-time">16:00</div>
-        <div class="program-title">Отдых</div>
-    </div>
-    <div class="program-item">
-        <div class="program-time">18:00</div>
-        <div class="program-title">Костёр</div>
-    </div>
-    <div class="program-item">
-        <div class="program-time">22:00</div>
-        <div class="program-title">Завершение</div>
-    </div>
-</div>
-<p class="message">
-    Буду рад провести этот день вместе —
-    погулять по лесу, пообщаться, вкусно поесть,
-    посидеть у огня и просто хорошо провести время.
-</p>
-</section>
-<!-- ==========================
-     DAY PLAN
-=========================== -->
-<section class="section" id="plan">
-<h2>
-    🕙 План дня
-</h2>
-<p class="section-intro">
-    Ориентировочно — без строгого расписания 😊
-</p>
+</header>
+
+
+<section class="section">
+
+<h2>🎉 План дня</h2>
+
 <div class="timeline">
-    <div class="timeline-item">
-        <div class="timeline-time">10:00</div>
-        <div>
-            <div class="timeline-title">
-                Встречаемся
-            </div>
-            <div class="timeline-text">
-                Приезжаем, знакомимся, размещаемся
-                и начинаем отдыхать.
-            </div>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-time">11:00</div>
-        <div>
-            <div class="timeline-title">
-                Лес и прогулка
-            </div>
-            <div class="timeline-text">
-                Гуляем, отдыхаем на природе,
-                фотографируемся.
-            </div>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-time">13:00</div>
-        <div>
-            <div class="timeline-title">
-                Пикник
-            </div>
-            <div class="timeline-text">
-                Еда, шашлык, разговоры
-                и отдых большой компанией.
-            </div>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-time">16:00</div>
-        <div>
-            <div class="timeline-title">
-                Отдых
-            </div>
-            <div class="timeline-text">
-                Свободное время, природа,
-                баня и общение.
-            </div>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-time">18:00</div>
-        <div>
-            <div class="timeline-title">
-                Костёр и праздник
-            </div>
-            <div class="timeline-text">
-                Вечер у огня, праздничный стол
-                и тёплая атмосфера.
-            </div>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-time">22:00</div>
-        <div>
-            <div class="timeline-title">
-                Завершение
-            </div>
-            <div class="timeline-text">
-                Заканчиваем праздник.
-                А дальше — как договоримся 😉
-            </div>
-        </div>
-    </div>
+
+<div class="timeRow">
+<div class="time">10:00</div>
+<div>
+<b>Собираемся</b><br>
+<span class="muted">
+Заезд, размещение, кофе и знакомство с территорией.
+</span>
+</div>
+</div>
+
+<div class="timeRow">
+<div class="time">11:00</div>
+<div>
+<b>🏕️ Кемпинг-старт</b><br>
+<span class="muted">
+Прогулка, активности и первые испытания.
+</span>
+</div>
+</div>
+
+<div class="timeRow">
+<div class="time">13:00</div>
+<div>
+<b>🍖 Пикник</b><br>
+<span class="muted">
+Еда, напитки и свободное общение.
+</span>
+</div>
+</div>
+
+<div class="timeRow">
+<div class="time">15:00</div>
+<div>
+<b>🎮 Игры</b><br>
+<span class="muted">
+Крокодил, квест, викторина и морской бой.
+</span>
+</div>
+</div>
+
+<div class="timeRow">
+<div class="time">18:00</div>
+<div>
+<b>🔥 Вечер у костра</b><br>
+<span class="muted">
+Вопросы, истории, музыка и тёплая компания.
+</span>
+</div>
+</div>
+
+<div class="timeRow">
+<div class="time">20:00</div>
+<div>
+<b>🎂 Торт</b><br>
+<span class="muted">
+Главный момент вечера.
+</span>
+</div>
+</div>
+
+<div class="timeRow">
+<div class="time">22:00</div>
+<div>
+<b>🌙 Финал</b><br>
+<span class="muted">
+Прощаемся и разъезжаемся.
+</span>
+</div>
+</div>
+
 </div>
 </section>
-<!-- ==========================
-     WHATSAPP
-=========================== -->
-<section class="section whatsapp-card" id="whatsapp">
-<div class="whatsapp-icon">
-    💬
-</div>
-<h2>
-    Обсуждаем всё в WhatsApp
-</h2>
-<p class="whatsapp-description">
-    Здесь будем обсуждать детали поездки,
-    транспорт, еду и всё остальное,
-    что понадобится перед праздником.
+
+
+<section class="section wa">
+
+<h2>💬 Группа гостей</h2>
+
+<p>
+<strong>Все организационные вопросы — в WhatsApp.</strong>
 </p>
+
+<p class="muted">
+Напишите, если задерживаетесь, нужна помощь с дорогой
+или хотите что-то уточнить.
+</p>
+
 <a
-    class="button primary"
-    href="https://chat.whatsapp.com/IFdvLcc4kXr2IqclBzXVLH?mode=gi_t"
-    target="_blank"
-    rel="noopener noreferrer"
+class="btn primary full"
+href="https://chat.whatsapp.com/IFdvLcc4kXr2IqclBzXVLH?mode=gi_t"
+target="_blank"
+rel="noopener"
 >
-    💚 Присоединиться к группе
+Открыть группу WhatsApp
 </a>
+
 </section>
-<!-- ==========================
-     LOCATION
-=========================== -->
+
+
+<!-- ==================== ИГРЫ ==================== -->
+
+<section class="section" id="games">
+
+<h2>🎮 Игры на пикничке</h2>
+
+<p class="muted">
+Все первые четыре игры работают прямо в браузере
+и не требуют регистрации.
+«Морской бой» — для двух игроков на одном устройстве.
+</p>
+
+
+<div class="gameTabs">
+
+<button class="tab active" data-game="croc">
+🐊<br>Крокодил
+</button>
+
+<button class="tab" data-game="quest">
+🏕️<br>Квест
+</button>
+
+<button class="tab" data-game="fire">
+🔥<br>У костра
+</button>
+
+<button class="tab" data-game="quiz">
+🎂<br>Вася
+</button>
+
+<button class="tab" data-game="sea">
+⚓<br>Бой
+</button>
+
+</div>
+
+
+<!-- КРОКОДИЛ -->
+
+<div class="game active" id="croc">
+
+<div class="gameTitle">
+🐊 Крокодил
+</div>
+
+<div class="muted">
+Показываем слово одному игроку —
+он объясняет без слов. 60 секунд.
+</div>
+
+<div class="word" id="crocWord">
+Нажмите «Новое слово»
+</div>
+
+<div class="btns">
+
+<button class="btn primary" onclick="newCroc()">
+🎲 Новое слово
+</button>
+
+<button class="btn" onclick="crocTimer()">
+⏱️ <span id="crocTime">60</span> сек
+</button>
+
+</div>
+
+<p class="note">
+Совет: передавайте телефон только тому,
+кто показывает слово.
+</p>
+
+</div>
+
+
+<!-- КЕМПИНГ-КВЕСТ -->
+
+<div class="game" id="quest">
+
+<div class="gameTitle">
+🏕️ Кемпинг-квест
+</div>
+
+<div class="muted">
+Случайное задание для компании.
+Выполните его и нажмите следующее.
+</div>
+
+<div class="word" id="questText">
+Готовы?
+</div>
+
+<div class="btns">
+
+<button class="btn primary" onclick="newQuest()">
+🎲 Следующее задание
+</button>
+
+</div>
+
+</div>
+
+
+<!-- У КОСТРА -->
+
+<div class="game" id="fire">
+
+<div class="gameTitle">
+🔥 У костра
+</div>
+
+<div class="muted">
+Вопросы для разговоров, историй
+и неожиданных признаний.
+</div>
+
+<div class="word" id="fireText">
+Нажмите кнопку
+</div>
+
+<div class="btns">
+
+<button class="btn primary" onclick="newFire()">
+🔥 Задать вопрос
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ВИКТОРИНА -->
+
+<div class="game" id="quiz">
+
+<div class="gameTitle">
+🎂 Насколько хорошо вы знаете Васю?
+</div>
+
+<div class="score">
+
+<span>
+Вопрос <b id="qNum">1</b>/10
+</span>
+
+<span>
+Очки: <b id="qScore">0</b>
+</span>
+
+</div>
+
+<div class="card">
+
+<h3 id="qText">
+Загрузка…
+</h3>
+
+<div class="choiceGrid" id="choices"></div>
+
+</div>
+
+<div class="btns" style="margin-top:10px">
+
+<button class="btn" onclick="restartQuiz()">
+🔄 Начать заново
+</button>
+
+</div>
+
+<p class="note">
+Сейчас это универсальная версия.
+Позже можно заменить 10 вопросов
+на персональные факты о Васе.
+</p>
+
+</div>
+
+
+<!-- МОРСКОЙ БОЙ -->
+
+<div class="game" id="sea">
+
+<div class="gameTitle">
+⚓ Морской бой — 2 игрока
+</div>
+
+<div class="muted">
+Локальная версия:
+два человека играют по очереди
+на одном устройстве. Интернет не нужен.
+</div>
+
+<div class="axis">
+
+<b id="seaTurn">
+Игрок 1 — расстановка
+</b>
+
+<button class="btn" onclick="restartSea()">
+🔄 Заново
+</button>
+
+</div>
+
+<div id="seaInfo" class="note">
+Игрок 1: разместите 3 корабля.
+Корабли длиной 3, 2 и 2.
+</div>
+
+<div class="boardWrap">
+
+<div class="board" id="seaBoard"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ЧТО ВЗЯТЬ -->
+
+<section class="section">
+
+<h2>🎒 Что взять с собой</h2>
+
+<div class="grid">
+
+<div class="card">
+🧥
+<h3>Одежда</h3>
+<span class="muted">
+Тёплый слой и непромокаемую куртку.
+</span>
+</div>
+
+<div class="card">
+👟
+<h3>Обувь</h3>
+<span class="muted">
+Удобную обувь для прогулок.
+</span>
+</div>
+
+<div class="card">
+🔦
+<h3>Фонарик</h3>
+<span class="muted">
+После заката пригодится.
+</span>
+</div>
+
+<div class="card">
+🔋
+<h3>Powerbank</h3>
+<span class="muted">
+Чтобы телефон не сел к вечеру.
+</span>
+</div>
+
+<div class="card">
+🦟
+<h3>От комаров</h3>
+<span class="muted">
+Репеллент по желанию.
+</span>
+</div>
+
+<div class="card">
+😊
+<h3>Настроение</h3>
+<span class="muted">
+Самое главное взять с собой.
+</span>
+</div>
+
+</div>
+</section>
+
+
+<!-- МЕСТО -->
+
 <section class="section" id="location">
-<h2>
-    📍 Где встречаемся
-</h2>
-<div class="place-name">
-    Greenvald Park Scandinavia
+
+<h2>📍 Где встречаемся</h2>
+
+<div class="address">
+
+<b>Greenvald Park Scandinavia</b><br>
+
+Ленинградская область, Выборгский район,
+Первомайское сельское поселение,
+посёлок Горки, ул. Озёрная, 1А
+
 </div>
-<p class="address">
-    Ленинградская область,<br>
-    Выборгский район,<br>
-    Первомайское сельское поселение,<br>
-    посёлок Горки,<br>
-    ул. Озёрная, 1А
-</p>
-<div class="buttons">
-    <a
-        class="button primary"
-        href="https://yandex.ru/navi/org/grinvald_park_skandinaviya/1298055490?si=53wuhxr1hhj53rnfh7q15jc4fw"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        🧭 Яндекс Навигатор
-    </a>
-    <a
-        class="button"
-        href="https://yandex.ru/maps/?ll=29.744828%2C60.287649&z=15&pt=29.744828%2C60.287649"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        🗺️ Яндекс Карты
-    </a>
+
+
+<div class="btns">
+
+<a
+class="btn primary"
+href="https://yandex.ru/navi/org/grinvald_park_skandinaviya/1298055490?si=53wuhxr1hhj53rnfh7q15jc4fw"
+target="_blank"
+rel="noopener"
+>
+🚗 Яндекс Навигатор
+</a>
+
+<a
+class="btn"
+href="https://yandex.ru/maps/?ll=29.744828%2C60.287649&z=15&pt=29.744828%2C60.287649"
+target="_blank"
+rel="noopener"
+>
+🗺️ Яндекс Карты
+</a>
+
+<a
+class="btn"
+href="https://park-scandinavia.ru"
+target="_blank"
+rel="noopener"
+>
+🌲 Сайт парка
+</a>
+
+<button class="btn" onclick="copyAddress()">
+📋 Скопировать адрес
+</button>
+
 </div>
-<div class="map-wrapper">
-    <iframe
-        class="map"
-        loading="lazy"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=29.725%2C60.275%2C29.765%2C60.300&layer=mapnik&marker=60.287649%2C29.744828"
-        title="Карта Greenvald Park Scandinavia">
-    </iframe>
+
+
+<div style="margin-top:14px">
+
+<iframe
+class="map"
+title="Карта"
+loading="lazy"
+src="https://www.openstreetmap.org/export/embed.html?bbox=29.725%2C60.275%2C29.765%2C60.300&layer=mapnik&marker=60.287649%2C29.744828">
+</iframe>
+
 </div>
-<div class="coordinates">
-    📌 60.287649, 29.744828
-</div>
+
 </section>
-<!-- ==========================
-     WHAT TO TAKE
-=========================== -->
-<section class="section" id="packing">
-<h2>
-    🎒 Что взять с собой
-</h2>
-<p class="section-intro">
-    Октябрь — лучше взять немного больше тёплых вещей,
-    чем потом искать их у костра 😊
-</p>
-<div class="pack-grid">
-    <div class="pack-card">
-        <div class="pack-icon">🥾</div>
-        <div class="pack-title">
-            Удобная обувь
-        </div>
-        <div class="pack-text">
-            Для прогулок по лесу и территории.
-        </div>
-    </div>
-    <div class="pack-card">
-        <div class="pack-icon">🧥</div>
-        <div class="pack-title">
-            Тёплая одежда
-        </div>
-        <div class="pack-text">
-            Особенно для вечера у костра.
-        </div>
-    </div>
-    <div class="pack-card">
-        <div class="pack-icon">🌧️</div>
-        <div class="pack-title">
-            Защита от дождя
-        </div>
-        <div class="pack-text">
-            Дождевик или непромокаемая куртка.
-        </div>
-    </div>
-    <div class="pack-card">
-        <div class="pack-icon">🔋</div>
-        <div class="pack-title">
-            Power bank
-        </div>
-        <div class="pack-text">
-            Телефон понадобится для связи и фото.
-        </div>
-    </div>
-    <div class="pack-card">
-        <div class="pack-icon">🩴</div>
-        <div class="pack-title">
-            Для бани
-        </div>
-        <div class="pack-text">
-            Если планируешь пользоваться баней.
-        </div>
-    </div>
-    <div class="pack-card">
-        <div class="pack-icon">😊</div>
-        <div class="pack-title">
-            Хорошее настроение
-        </div>
-        <div class="pack-text">
-            Это самое главное.
-        </div>
-    </div>
+
+
+<!-- ПОЛЕЗНЫЕ КНОПКИ -->
+
+<section class="section">
+
+<h2>📅 Полезные кнопки</h2>
+
+<div class="btns">
+
+<a
+class="btn primary"
+href="data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20261010T070000Z%0ADTEND:20261010T190000Z%0ASUMMARY:%D0%94%D0%B5%D0%BD%D1%8C%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%92%D0%B0%D1%81%D0%B8%0ALOCATION:Greenvald%20Park%20Scandinavia%2C%20%D0%BF.%20%D0%93%D0%BE%D1%80%D0%BA%D0%B8%2C%20%D1%83%D0%BB.%20%D0%9E%D0%B7%D1%91%D1%80%D0%BD%D0%B0%D1%8F%2C%201%D0%90%0AEND:VEVENT%0AEND:VCALENDAR"
+download="vasya-birthday-2026.ics"
+>
+📅 Добавить в календарь
+</a>
+
+<button class="btn" onclick="sharePage()">
+📤 Поделиться
+</button>
+
 </div>
+
 </section>
-<!-- ==========================
-     ABOUT PLACE
-=========================== -->
-<section class="section" id="about">
-<h2>
-    🌲 О месте
-</h2>
-<p class="about-text">
-    Нас ждёт отдых среди леса и озёр
-    в <b>Greenvald Park Scandinavia</b>.
-</p>
-<p class="about-text">
-    Можно гулять, отдыхать на природе,
-    пользоваться инфраструктурой базы,
-    а главное — провести день вместе,
-    без городской суеты.
-</p>
-<div class="buttons">
-    <a
-        class="button primary"
-        href="https://park-scandinavia.ru"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        🌐 Сайт базы
-    </a>
-    <a
-        class="button"
-        href="https://yandex.ru/navi/org/grinvald_park_skandinaviya/1298055490?si=53wuhxr1hhj53rnfh7q15jc4fw"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        🚗 Построить маршрут
-    </a>
-</div>
-</section>
-<!-- ==========================
-     USEFUL
-=========================== -->
-<section class="section" id="useful">
-<h2>
-    📱 Полезное
-</h2>
-<div class="utility-grid">
-    <button
-        class="button"
-        type="button"
-        onclick="addToCalendar()"
-    >
-        📅 В календарь
-    </button>
-    <button
-        class="button"
-        type="button"
-        onclick="copyAddress()"
-    >
-        📋 Скопировать адрес
-    </button>
-    <button
-        class="button"
-        type="button"
-        onclick="sharePage()"
-    >
-        📤 Поделиться
-    </button>
-    <button
-        class="button"
-        type="button"
-        onclick="scrollToTop()"
-    >
-        ⬆️ В начало
-    </button>
-</div>
-<div
-    id="status"
-    class="status"
-    aria-live="polite">
-</div>
-</section>
-<!-- ==========================
-     FINAL
-=========================== -->
-<section class="final">
-<div class="eyebrow">
-    10.10.2026 · 10:00
-</div>
-<div class="final-title">
-    Буду ждать тебя! ❤️
-</div>
-<p class="final-subtitle">
-    Хорошая компания · природа · костёр · праздник
-</p>
+
+
 <div class="footer">
-    Vasya's Birthday · Greenvald Park Scandinavia
+Вася · 10 октября 2026 · Greenvald Park Scandinavia 🏕️
 </div>
-</section>
+
 </div>
-</div>
-<!-- ==========================
-     MOBILE BOTTOM BAR
-=========================== -->
-<div class="bottom-bar">
-<a
-    class="bottom-button whatsapp"
-    href="https://chat.whatsapp.com/IFdvLcc4kXr2IqclBzXVLH?mode=gi_t"
-    target="_blank"
-    rel="noopener noreferrer"
+
+
+<button
+class="top"
+onclick="scrollTo({top:0,behavior:'smooth'})"
 >
-    💬 WhatsApp
-</a>
+↑
+</button>
+
+
+<div class="bottom">
+
 <a
-    class="bottom-button top"
-    href="#location"
+class="btn wa"
+href="https://chat.whatsapp.com/IFdvLcc4kXr2IqclBzXVLH?mode=gi_t"
+target="_blank"
+rel="noopener"
 >
-    📍 Место
+💬 WhatsApp
 </a>
+
+<a
+class="btn primary"
+href="#games"
+>
+🎮 Игры
+</a>
+
+<a
+class="btn"
+href="#location"
+>
+📍 Место
+</a>
+
 </div>
+
+
 <script>
-/* ==========================
-   COUNTDOWN
-=========================== */
-const eventDate =
-    new Date("2026-10-10T10:00:00+03:00").getTime();
+
+/* ==================== COUNTDOWN ==================== */
+
+const birthday =
+  new Date("2026-10-10T10:00:00+03:00");
+
 function updateCountdown(){
-    const now = Date.now();
-    const distance = eventDate - now;
-    const days =
-        document.getElementById("days");
-    const hours =
-        document.getElementById("hours");
-    const minutes =
-        document.getElementById("minutes");
-    const seconds =
-        document.getElementById("seconds");
-    if(distance <= 0){
-        days.textContent = "0";
-        hours.textContent = "0";
-        minutes.textContent = "0";
-        seconds.textContent = "0";
-        return;
-    }
-    const totalSeconds =
-        Math.floor(distance / 1000);
-    const d =
-        Math.floor(totalSeconds / 86400);
-    const h =
-        Math.floor((totalSeconds % 86400) / 3600);
-    const m =
-        Math.floor((totalSeconds % 3600) / 60);
-    const s =
-        totalSeconds % 60;
-    days.textContent = d;
-    hours.textContent = String(h).padStart(2,"0");
-    minutes.textContent = String(m).padStart(2,"0");
-    seconds.textContent = String(s).padStart(2,"0");
+
+  let d = birthday - Date.now();
+
+  if(d < 0) d = 0;
+
+  let s = Math.floor(d / 1000);
+
+  let days = Math.floor(s / 86400);
+
+  s %= 86400;
+
+  let h = Math.floor(s / 3600);
+
+  s %= 3600;
+
+  let m = Math.floor(s / 60);
+
+  let sec = s % 60;
+
+  document.querySelector("#count").innerHTML = [
+
+    days,
+    h,
+    m,
+    sec
+
+  ].map((x,i)=>`
+
+    <div>
+      <b>${String(x).padStart(2,"0")}</b>
+      <span>
+        ${["дней","часов","минут","секунд"][i]}
+      </span>
+    </div>
+
+  `).join("");
+
 }
+
 updateCountdown();
+
 setInterval(updateCountdown,1000);
-/* ==========================
-   CALENDAR
-=========================== */
-function addToCalendar(){
-    const ics = [
-        "BEGIN:VCALENDAR",
-        "VERSION:2.0",
-        "PRODID:-//Vasya Birthday//RU",
-        "CALSCALE:GREGORIAN",
-        "BEGIN:VEVENT",
-        "UID:vasya-birthday-2026@example.com",
-        "DTSTAMP:20260101T000000Z",
-        "DTSTART:20261010T070000Z",
-        "DTEND:20261010T190000Z",
-        "SUMMARY:День рождения Васи",
-        "LOCATION:Greenvald Park Scandinavia, Ленинградская область, Выборгский район, посёлок Горки",
-        "DESCRIPTION:День рождения Васи. Лес, пикник, прогулка, костёр и хорошая компания.",
-        "END:VEVENT",
-        "END:VCALENDAR"
-    ].join("\r\n");
-    const blob =
-        new Blob(
-            [ics],
-            {type:"text/calendar;charset=utf-8"}
-        );
-    const url =
-        URL.createObjectURL(blob);
-    const link =
-        document.createElement("a");
-    link.href = url;
-    link.download = "vasya-birthday-2026.ics";
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    setTimeout(
-        () => URL.revokeObjectURL(url),
-        1000
-    );
-    showStatus("📅 Файл календаря подготовлен");
+
+
+/* ==================== GAME TABS ==================== */
+
+document
+.querySelectorAll(".tab")
+.forEach(button=>{
+
+  button.addEventListener("click",()=>{
+
+    document
+    .querySelectorAll(".tab")
+    .forEach(x=>x.classList.remove("active"));
+
+    document
+    .querySelectorAll(".game")
+    .forEach(x=>x.classList.remove("active"));
+
+    button.classList.add("active");
+
+    document
+    .getElementById(button.dataset.game)
+    .classList.add("active");
+
+  });
+
+});
+
+
+/* ==================== КРОКОДИЛ ==================== */
+
+const crocWords = [
+
+  "палатка",
+  "костёр",
+  "мангал",
+  "рюкзак",
+  "компас",
+  "спальный мешок",
+  "фонарик",
+  "термос",
+  "дождевик",
+  "комар",
+  "медведь",
+  "турист",
+  "рыбалка",
+  "шашлык",
+  "гитара",
+  "баня",
+  "озеро",
+  "сосна",
+  "поход",
+  "пикник",
+  "бутерброд",
+  "дрова",
+  "шампур",
+  "чайник",
+  "велосипед",
+  "фотоаппарат",
+  "будильник",
+  "такси",
+  "самолёт",
+  "танец",
+  "директор",
+  "детектив",
+  "страховка",
+  "автомобиль",
+  "судья",
+  "путешествие"
+
+];
+
+let crocInterval;
+
+
+function newCroc(){
+
+  document
+  .getElementById("crocWord")
+  .textContent =
+  crocWords[
+    Math.floor(Math.random()*crocWords.length)
+  ];
+
+  clearInterval(crocInterval);
+
+  document
+  .getElementById("crocTime")
+  .textContent="60";
+
 }
-/* ==========================
-   COPY ADDRESS
-=========================== */
-function copyAddress(){
-    const address =
-        "Greenvald Park Scandinavia, " +
-        "Ленинградская область, " +
-        "Выборгский район, " +
-        "Первомайское сельское поселение, " +
-        "посёлок Горки, ул. Озёрная, 1А";
-    if(navigator.clipboard){
-        navigator.clipboard
-            .writeText(address)
-            .then(() => {
-                showStatus("📋 Адрес скопирован");
-            })
-            .catch(() => {
-                fallbackCopy(address);
-            });
-    }else{
-        fallbackCopy(address);
+
+
+function crocTimer(){
+
+  clearInterval(crocInterval);
+
+  let t = 60;
+
+  document
+  .getElementById("crocTime")
+  .textContent=t;
+
+  crocInterval=setInterval(()=>{
+
+    t--;
+
+    document
+    .getElementById("crocTime")
+    .textContent=t;
+
+    if(t<=0){
+
+      clearInterval(crocInterval);
+
+      if(navigator.vibrate){
+        navigator.vibrate(300);
+      }
+
     }
+
+  },1000);
+
 }
-/* ==========================
-   FALLBACK COPY
-=========================== */
-function fallbackCopy(text){
-    const textarea =
-        document.createElement("textarea");
-    textarea.value = text;
-    textarea.style.position = "fixed";
-    textarea.style.opacity = "0";
-    document.body.appendChild(textarea);
-    textarea.focus();
-    textarea.select();
-    try{
-        document.execCommand("copy");
-        showStatus("📋 Адрес скопирован");
-    }catch(e){
-        showStatus("Не удалось скопировать адрес");
-    }
-    textarea.remove();
+
+
+/* ==================== КЕМПИНГ-КВЕСТ ==================== */
+
+const quests = [
+
+  "Найдите человека, которого знаете меньше всего, и познакомьтесь.",
+
+  "Сделайте общее фото всей компанией.",
+
+  "Найдите самое необычное дерево рядом.",
+
+  "Придумайте название сегодняшней команде.",
+
+  "Соберите команду из 3 человек и изобразите поход без слов.",
+
+  "Найдите предмет, который можно использовать не по назначению.",
+
+  "Придумайте тост из ровно пяти слов.",
+
+  "За 30 секунд придумайте рекламный слоган для этого пикника.",
+
+  "Найдите человека с самым необычным фактом о себе.",
+
+  "Сделайте 10 приседаний всей командой.",
+
+  "Изобразите костёр, не произнося ни слова.",
+
+  "Найдите человека, который сегодня приехал дальше всех."
+
+];
+
+
+function newQuest(){
+
+  document
+  .getElementById("questText")
+  .textContent =
+  quests[
+    Math.floor(Math.random()*quests.length)
+  ];
+
 }
-/* ==========================
-   SHARE
-=========================== */
-async function sharePage(){
-    const shareData = {
-        title:"День рождения Васи",
-        text:
-            "Приглашаю на мой день рождения " +
-            "10 октября 2026 года 🌲🔥",
-        url:window.location.href
-    };
-    if(navigator.share){
-        try{
-            await navigator.share(shareData);
-        }catch(error){
-            if(error.name !== "AbortError"){
-                copyPageLink();
-            }
+
+
+/* ==================== У КОСТРА ==================== */
+
+const fireQs = [
+
+  "Какое путешествие ты хотел бы повторить?",
+
+  "Самое смешное приключение в твоей жизни?",
+
+  "Куда бы ты уехал на месяц прямо завтра?",
+
+  "Какой навык ты хотел бы получить за один день?",
+
+  "Какой фильм можешь пересматривать бесконечно?",
+
+  "Самая спонтанная покупка, о которой не жалеешь?",
+
+  "Какой совет ты дал бы себе десять лет назад?",
+
+  "Что обязательно должно быть в идеальном походе?",
+
+  "Какой момент этого года запомнился больше всего?",
+
+  "Кем бы ты стал, если бы не занимался своей нынешней работой?",
+
+  "Какой подарок тебе запомнился сильнее всего?",
+
+  "Какое блюдо ты готов есть хоть каждую неделю?",
+
+  "Что тебя гарантированно рассмешит?",
+
+  "Какую страну хочешь посетить следующей?"
+
+];
+
+
+function newFire(){
+
+  document
+  .getElementById("fireText")
+  .textContent =
+  fireQs[
+    Math.floor(Math.random()*fireQs.length)
+  ];
+
+}
+
+
+/* ==================== ВИКТОРИНА ==================== */
+
+const quiz = [
+
+[
+  "Какой сегодня повод?",
+  ["День рождения Васи","Новый год","Корпоратив","Свадьба"],
+  0
+],
+
+[
+  "Где проходит праздник?",
+  ["Greenvald Park Scandinavia","Эрмитаж","Москва-Сити","Дом Васи"],
+  0
+],
+
+[
+  "В каком месяце праздник?",
+  ["Октябре","Июле","Декабре","Феврале"],
+  0
+],
+
+[
+  "Во сколько начинается праздник?",
+  ["10:00","08:00","12:00","18:00"],
+  0
+],
+
+[
+  "Какой формат праздника?",
+  ["Пикник и кемпинг","Бал","Конференция","Экскурсия"],
+  0
+],
+
+[
+  "Что особенно пригодится вечером?",
+  ["Фонарик","Лыжи","Паспорт моряка","Зонтик от солнца"],
+  0
+],
+
+[
+  "Какой раздел сайта отвечает за развлечения?",
+  ["🎮 Игры","Финансы","Новости","Работа"],
+  0
+],
+
+[
+  "Что можно сделать в WhatsApp-группе?",
+  ["Обсудить организацию","Купить билет на самолёт","Сдать экзамен","Заказать такси автоматически"],
+  0
+],
+
+[
+  "Что главное взять на праздник?",
+  ["Хорошее настроение","Телевизор","Принтер","Сейф"],
+  0
+],
+
+[
+  "Что будет вечером?",
+  ["Костёр и торт","Самолёт","Экзамен","Совещание"],
+  0
+]
+
+];
+
+
+let qi = 0;
+
+let qs = 0;
+
+
+function renderQuiz(){
+
+  if(qi >= quiz.length){
+
+    document
+    .getElementById("qText")
+    .textContent =
+    `🎉 Викторина окончена! Результат: ${qs}/${quiz.length}`;
+
+    document
+    .getElementById("choices")
+    .innerHTML = `
+
+      <button
+      class="btn primary full"
+      onclick="restartQuiz()"
+      >
+      Пройти ещё раз
+      </button>
+
+    `;
+
+    return;
+
+  }
+
+
+  document
+  .getElementById("qNum")
+  .textContent = qi + 1;
+
+
+  document
+  .getElementById("qScore")
+  .textContent = qs;
+
+
+  document
+  .getElementById("qText")
+  .textContent = quiz[qi][0];
+
+
+  document
+  .getElementById("choices")
+  .innerHTML =
+  quiz[qi][1]
+  .map((x,i)=>`
+
+    <button
+    class="choice"
+    onclick="answerQuiz(${i})"
+    >
+    ${x}
+    </button>
+
+  `)
+  .join("");
+
+}
+
+
+function answerQuiz(i){
+
+  let buttons =
+    [...document.querySelectorAll("#choices .choice")];
+
+  buttons.forEach(
+    b => b.disabled = true
+  );
+
+
+  if(i === quiz[qi][2]){
+
+    buttons[i]
+    .classList
+    .add("correct");
+
+    qs++;
+
+  }else{
+
+    buttons[i]
+    .classList
+    .add("wrong");
+
+    buttons[quiz[qi][2]]
+    .classList
+    .add("correct");
+
+  }
+
+
+  document
+  .getElementById("qScore")
+  .textContent = qs;
+
+
+  setTimeout(()=>{
+
+    qi++;
+
+    renderQuiz();
+
+  },700);
+
+}
+
+
+function restartQuiz(){
+
+  qi=0;
+
+  qs=0;
+
+  renderQuiz();
+
+}
+
+
+renderQuiz();
+
+
+/* ==================== МОРСКОЙ БОЙ ==================== */
+
+let sea = {
+
+  turn:1,
+
+  phase:"place",
+
+  ships:{
+    1:[],
+    2:[]
+  },
+
+  shots:{
+    1:[],
+    2:[]
+  },
+
+  placed:0
+
+};
+
+
+function restartSea(){
+
+  sea = {
+
+    turn:1,
+
+    phase:"place",
+
+    ships:{
+      1:[],
+      2:[]
+    },
+
+    shots:{
+      1:[],
+      2:[]
+    },
+
+    placed:0
+
+  };
+
+  renderSea();
+
+}
+
+
+function renderSea(){
+
+  const board =
+    document.getElementById("seaBoard");
+
+  board.innerHTML="";
+
+
+  document
+  .getElementById("seaTurn")
+  .textContent =
+  sea.phase==="place"
+  ?
+  `Игрок ${sea.turn} — расстановка`
+  :
+  `Ход игрока ${sea.turn}`;
+
+
+  document
+  .getElementById("seaInfo")
+  .textContent =
+  sea.phase==="place"
+  ?
+  `Игрок ${sea.turn}: разместите корабли. Сейчас размещается корабль №${sea.placed+1}. Длина: ${[3,2,2][sea.placed]||0}. Нажимайте клетки подряд по горизонтали.`
+  :
+  sea.phase==="battle"
+  ?
+  `Игрок ${sea.turn}: выберите клетку противника. После выстрела передайте телефон другому игроку.`
+  :
+  `🏆 Игра окончена! Нажмите «Заново», чтобы сыграть ещё раз.`;
+
+
+  for(let r=0;r<6;r++){
+
+    let lab =
+      document.createElement("div");
+
+    lab.className="small";
+
+    lab.textContent=r+1;
+
+    board.appendChild(lab);
+
+
+    for(let c=0;c<6;c++){
+
+      let el =
+        document.createElement("button");
+
+      el.className="cell";
+
+      el.setAttribute(
+        "aria-label",
+        `${r+1},${c+1}`
+      );
+
+
+      el.onclick=()=>{
+        seaClick(r,c);
+      };
+
+
+      if(
+        sea.phase==="place" &&
+        sea.ships[sea.turn]
+        .some(
+          p=>p[0]===r && p[1]===c
+        )
+      ){
+
+        el.classList.add("ship");
+
+      }
+
+
+      if(sea.phase==="battle"){
+
+        let shot =
+          sea.shots[sea.turn]
+          .find(
+            p=>p[0]===r && p[1]===c
+          );
+
+
+        if(shot){
+
+          el.classList
+          .add(
+            shot[2]
+            ?"hit"
+            :"miss"
+          );
+
         }
-    }else{
-        copyPageLink();
+
+      }
+
+
+      board.appendChild(el);
+
     }
+
+  }
+
 }
-/* ==========================
-   COPY PAGE LINK
-=========================== */
-function copyPageLink(){
-    const url =
-        window.location.href;
-    if(navigator.clipboard){
-        navigator.clipboard
-            .writeText(url)
-            .then(() => {
-                showStatus("🔗 Ссылка скопирована");
-            });
-    }else{
-        fallbackCopy(url);
+
+
+function seaClick(r,c){
+
+  if(sea.phase==="place"){
+
+    placeShip(r,c);
+
+    return;
+
+  }
+
+
+  if(sea.phase!=="battle"){
+    return;
+  }
+
+
+  let enemy =
+    sea.turn===1 ? 2 : 1;
+
+
+  if(
+    sea.shots[sea.turn]
+    .some(
+      p=>p[0]===r && p[1]===c
+    )
+  ){
+    return;
+  }
+
+
+  let hit =
+    sea.ships[enemy]
+    .some(
+      p=>p[0]===r && p[1]===c
+    );
+
+
+  sea.shots[sea.turn]
+  .push([r,c,hit]);
+
+
+  if(
+    hit &&
+    sea.ships[enemy]
+    .every(
+      p=>
+      sea.shots[sea.turn]
+      .some(
+        s=>s[0]===p[0] &&
+           s[1]===p[1]
+      )
+    )
+  ){
+
+    sea.phase="done";
+
+  }else if(!hit){
+
+    sea.turn=enemy;
+
+  }
+
+
+  renderSea();
+
+}
+
+
+function placeShip(r,c){
+
+  let lengths=[3,2,2];
+
+  let len=lengths[sea.placed];
+
+
+  if(!len){
+    return;
+  }
+
+
+  let cells=[];
+
+
+  for(let i=0;i<len;i++){
+
+    let rr=r;
+
+    let cc=c+i;
+
+
+    if(cc>=6){
+      return;
     }
+
+
+    if(
+      sea.ships[sea.turn]
+      .some(
+        p=>p[0]===rr &&
+           p[1]===cc
+      )
+    ){
+      return;
+    }
+
+
+    cells.push([rr,cc]);
+
+  }
+
+
+  sea.ships[sea.turn]
+  .push(...cells);
+
+
+  sea.placed++;
+
+
+  if(sea.placed===3){
+
+    if(sea.turn===1){
+
+      sea.turn=2;
+
+      sea.placed=0;
+
+    }else{
+
+      sea.phase="battle";
+
+      sea.turn=1;
+
+    }
+
+  }
+
+
+  renderSea();
+
 }
-/* ==========================
-   STATUS
-=========================== */
-function showStatus(message){
-    const status =
-        document.getElementById("status");
-    status.textContent = message;
-    clearTimeout(window.statusTimer);
-    window.statusTimer =
-        setTimeout(() => {
-            status.textContent = "";
-        },3500);
+
+
+restartSea();
+
+
+/* ==================== КНОПКИ ==================== */
+
+async function copyAddress(){
+
+  const address =
+  "Ленинградская область, Выборгский район, Первомайское сельское поселение, посёлок Горки, ул. Озёрная, 1А";
+
+
+  try{
+
+    await navigator.clipboard
+    .writeText(address);
+
+    alert("Адрес скопирован");
+
+  }catch(e){
+
+    prompt(
+      "Скопируйте адрес:",
+      address
+    );
+
+  }
+
 }
-/* ==========================
-   SCROLL TOP
-=========================== */
-function scrollToTop(){
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
+
+
+async function sharePage(){
+
+  try{
+
+    await navigator.share({
+
+      title:"Вася — 38! 🏕️",
+
+      text:
+      "День рождения 10 октября 2026 · Greenvald Park Scandinavia",
+
+      url:location.href
+
     });
+
+  }catch(e){
+
+    try{
+
+      await navigator.clipboard
+      .writeText(location.href);
+
+      alert("Ссылка скопирована");
+
+    }catch(_){}
+
+  }
+
 }
+
 </script>
+
 </body>
 </html>
