@@ -221,13 +221,62 @@ section{
   background:#0d1a13;
 }
 
-/* GAMES */
+
+/* ==================== GAMES 2.0 ==================== */
+
+.gamesHero{
+  background:
+    radial-gradient(circle at 15% 10%, #a8d5a21f 0, transparent 32%),
+    radial-gradient(circle at 90% 90%, #6fb58b18 0, transparent 35%),
+    #102018;
+  border:1px solid #355440;
+  border-radius:20px;
+  padding:18px;
+  margin-bottom:14px;
+}
+
+.gamesHeroTop{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  justify-content:space-between;
+}
+
+.gamesKicker{
+  color:var(--accent);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.gamesHero h3{
+  margin:4px 0 5px;
+  font-size:25px;
+}
+
+.gamesHero p{
+  margin:0;
+  color:var(--muted);
+}
+
+.gamesBadge{
+  flex:0 0 auto;
+  min-width:70px;
+  text-align:center;
+  padding:9px 10px;
+  border-radius:15px;
+  background:#0d1a13;
+  border:1px solid var(--line);
+  font-size:12px;
+  font-weight:850;
+}
 
 .gameTabs{
   display:grid;
   grid-template-columns:repeat(5,1fr);
   gap:7px;
-  margin-bottom:12px;
+  margin:0 0 12px;
 }
 
 .tab{
@@ -239,11 +288,17 @@ section{
   cursor:pointer;
   font-weight:750;
   font-size:12px;
+  transition:.18s ease;
+}
+
+.tab:hover{
+  transform:translateY(-1px);
 }
 
 .tab.active{
   background:var(--accent);
   color:#102014;
+  border-color:var(--accent);
 }
 
 .game{
@@ -256,27 +311,61 @@ section{
 
 .gameTitle{
   font-size:22px;
-  font-weight:850;
+  font-weight:900;
   margin-bottom:5px;
+}
+
+.gameSub{
+  color:var(--muted);
+  margin-bottom:13px;
 }
 
 .word{
   font-size:clamp(32px,9vw,58px);
   font-weight:900;
   text-align:center;
-  padding:28px 10px;
+  padding:30px 12px;
   border-radius:20px;
   background:#0d1a13;
+  border:1px solid var(--line);
   margin:14px 0;
+  min-height:105px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .score{
   display:flex;
   justify-content:space-between;
+  gap:10px;
   background:#0d1a13;
-  padding:12px;
+  border:1px solid var(--line);
+  padding:11px 13px;
   border-radius:13px;
   margin-bottom:10px;
+}
+
+.progress{
+  height:8px;
+  background:#0d1a13;
+  border-radius:999px;
+  overflow:hidden;
+  margin:9px 0 15px;
+  border:1px solid var(--line);
+}
+
+.progress > div{
+  height:100%;
+  width:0;
+  background:var(--accent);
+  transition:width .25s ease;
+}
+
+.quizQuestion{
+  font-size:20px;
+  line-height:1.3;
+  margin:4px 0 14px;
 }
 
 .choiceGrid{
@@ -293,19 +382,176 @@ section{
   color:var(--text);
   cursor:pointer;
   text-align:left;
+  min-height:58px;
+  transition:.16s ease;
+}
+
+.choice:hover:not(:disabled){
+  transform:translateY(-1px);
+  border-color:#557c60;
 }
 
 .choice.correct{
   outline:2px solid var(--accent);
+  background:#203d2a;
 }
 
 .choice.wrong{
   outline:2px solid var(--danger);
+  background:#3a2020;
+}
+
+.choice:disabled{
+  cursor:default;
+}
+
+.answerNote{
+  margin-top:12px;
+  padding:11px 13px;
+  border-radius:13px;
+  background:#0d1a13;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.quizResult{
+  text-align:center;
+  padding:20px 10px 10px;
+}
+
+.resultEmoji{
+  font-size:54px;
+  line-height:1;
+}
+
+.resultTitle{
+  font-size:27px;
+  font-weight:900;
+  margin:9px 0 5px;
+}
+
+.resultScore{
+  font-size:18px;
+  color:var(--accent);
+  font-weight:850;
+}
+
+.quizMini{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin:14px 0;
+}
+
+.quizMini div{
+  background:#0d1a13;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:10px;
+  text-align:center;
+}
+
+.quizMini b{
+  display:block;
+  font-size:20px;
+}
+
+.quizMini span{
+  font-size:11px;
+  color:var(--muted);
+}
+
+.crocMeta{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:10px;
+}
+
+.crocMeta div{
+  background:#0d1a13;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:10px;
+  text-align:center;
+}
+
+.crocMeta b{
+  display:block;
+  color:var(--accent);
+}
+
+.crocMeta span{
+  font-size:11px;
+  color:var(--muted);
+}
+
+.timer{
+  font-size:30px;
+  font-weight:900;
+  letter-spacing:.04em;
+}
+
+.timer.hot{
+  color:#ffb3a7;
+}
+
+.questCard{
+  text-align:center;
+  padding:24px 14px;
+  border-radius:20px;
+  background:#0d1a13;
+  border:1px solid var(--line);
+  margin:14px 0;
+}
+
+.questIcon{
+  font-size:42px;
+}
+
+.questText{
+  font-size:21px;
+  font-weight:850;
+  margin:9px auto 0;
+  max-width:650px;
+}
+
+.fireQuote{
+  padding:23px 17px;
+  background:#0d1a13;
+  border:1px solid var(--line);
+  border-radius:20px;
+  margin:14px 0;
+  font-size:21px;
+  font-weight:750;
+  text-align:center;
+}
+
+.fireQuote:before{
+  content:"“";
+  display:block;
+  font-size:38px;
+  line-height:.7;
+  color:var(--accent);
+}
+
+.fireTag{
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.seaHead{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
 }
 
 .boardWrap{
   overflow:auto;
-  padding-bottom:5px;
+  padding:5px 0 8px;
 }
 
 .board{
@@ -321,6 +567,7 @@ section{
   background:#1a3928;
   border-radius:5px;
   cursor:pointer;
+  color:var(--text);
 }
 
 .cell.ship{
@@ -340,102 +587,36 @@ section{
   gap:7px;
   align-items:center;
   margin:10px 0;
+  flex-wrap:wrap;
 }
 
-.note{
-  padding:11px 13px;
-  background:#0d1a13;
-  border-radius:13px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-.small{
-  font-size:12px;
-}
-
-.footer{
+.gamesFooter{
+  margin-top:12px;
   text-align:center;
   color:var(--muted);
   font-size:12px;
-  padding:25px 0;
-}
-
-.top{
-  position:fixed;
-  right:14px;
-  bottom:78px;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  border:1px solid var(--line);
-  background:#14261ce8;
-  color:var(--text);
-  cursor:pointer;
-}
-
-.bottom{
-  position:fixed;
-  left:0;
-  right:0;
-  bottom:0;
-  padding:9px max(10px,env(safe-area-inset-left))
-           max(9px,env(safe-area-inset-bottom));
-  background:#0b1510ed;
-  backdrop-filter:blur(12px);
-  display:flex;
-  gap:8px;
-  border-top:1px solid var(--line);
-  z-index:5;
-}
-
-.bottom a{
-  flex:1;
-}
-
-.bottom .btn{
-  min-height:42px;
-  padding:8px;
-  font-size:13px;
 }
 
 @media(max-width:650px){
-
-  .grid{
-    grid-template-columns:1fr;
-  }
 
   .gameTabs{
     grid-template-columns:repeat(3,1fr);
   }
 
-  .count b{
-    font-size:20px;
-  }
-
-  .heroText{
-    padding:20px;
-  }
-
-  .timeRow{
-    grid-template-columns:66px 1fr;
-  }
-
-  .map{
-    height:270px;
-  }
-
-  .wrap{
-    padding-left:11px;
-    padding-right:11px;
-  }
-
-  .section{
-    padding:16px;
-  }
-
   .choiceGrid{
     grid-template-columns:1fr;
+  }
+
+  .gamesHeroTop{
+    align-items:center;
+  }
+
+  .gamesBadge{
+    min-width:62px;
+  }
+
+  .quizMini{
+    grid-template-columns:1fr 1fr 1fr;
   }
 
   .board{
@@ -443,6 +624,7 @@ section{
     grid-auto-rows:34px;
   }
 }
+
 </style>
 </head>
 
@@ -487,6 +669,7 @@ section{
 </div>
 
 </div>
+
 </div>
 </header>
 
@@ -530,9 +713,9 @@ section{
 <div class="timeRow">
 <div class="time">15:00</div>
 <div>
-<b>🎮 Игры</b><br>
+<b>🎲 Игры</b><br>
 <span class="muted">
-Крокодил, квест, викторина и морской бой.
+Крокодил, викторина, квест и другие задания.
 </span>
 </div>
 </div>
@@ -540,19 +723,9 @@ section{
 <div class="timeRow">
 <div class="time">18:00</div>
 <div>
-<b>🔥 Вечер у костра</b><br>
+<b>🔥 Костёр</b><br>
 <span class="muted">
-Вопросы, истории, музыка и тёплая компания.
-</span>
-</div>
-</div>
-
-<div class="timeRow">
-<div class="time">20:00</div>
-<div>
-<b>🎂 Торт</b><br>
-<span class="muted">
-Главный момент вечера.
+Разговоры, музыка, истории и вечерняя атмосфера.
 </span>
 </div>
 </div>
@@ -562,36 +735,37 @@ section{
 <div>
 <b>🌙 Финал</b><br>
 <span class="muted">
-Прощаемся и разъезжаемся.
+Обнимаемся, фотографируемся и разъезжаемся.
 </span>
 </div>
 </div>
 
 </div>
+
 </section>
 
 
-<section class="section wa">
+<section class="section">
 
-<h2>💬 Группа гостей</h2>
+<h2>📱 Группа гостей</h2>
 
-<p>
-<strong>Все организационные вопросы — в WhatsApp.</strong>
-</p>
+<div class="card wa">
+
+<strong>Всё самое важное — в WhatsApp</strong>
 
 <p class="muted">
-Напишите, если задерживаетесь, нужна помощь с дорогой
-или хотите что-то уточнить.
+Организационные вопросы, изменения, фото, новости и связь перед праздником.
 </p>
 
 <a
 class="btn primary full"
-href="https://chat.whatsapp.com/IFdvLcc4kXr2IqclBzXVLH?mode=gi_t"
+href="https://chat.whatsapp.com/"
 target="_blank"
-rel="noopener"
->
-Открыть группу WhatsApp
+rel="noopener">
+💬 Открыть WhatsApp
 </a>
+
+</div>
 
 </section>
 
@@ -600,18 +774,40 @@ rel="noopener"
 
 <section class="section" id="games">
 
-<h2>🎮 Игры на пикничке</h2>
+<div class="gamesHero">
 
-<p class="muted">
-Все первые четыре игры работают прямо в браузере
-и не требуют регистрации.
-«Морской бой» — для двух игроков на одном устройстве.
+<div class="gamesHeroTop">
+
+<div>
+
+<div class="gamesKicker">Camp Game Center</div>
+
+<h3>🎲 Игры для компании</h3>
+
+<p>
+49 вопросов о Васе, новый Крокодил, задания для компании,
+разговоры у костра и Морской бой. Всё работает прямо на телефоне.
 </p>
+
+</div>
+
+<div class="gamesBadge">
+OFFLINE<br>
+🏕️
+</div>
+
+</div>
+
+</div>
 
 
 <div class="gameTabs">
 
-<button class="tab active" data-game="croc">
+<button class="tab active" data-game="quiz">
+🎂<br>49 о Васе
+</button>
+
+<button class="tab" data-game="croc">
 🐊<br>Крокодил
 </button>
 
@@ -620,125 +816,33 @@ rel="noopener"
 </button>
 
 <button class="tab" data-game="fire">
-🔥<br>У костра
-</button>
-
-<button class="tab" data-game="quiz">
-🎂<br>Вася
+🔥<br>Костёр
 </button>
 
 <button class="tab" data-game="sea">
-⚓<br>Бой
+⚓<br>Морской бой
 </button>
 
 </div>
 
 
-<!-- КРОКОДИЛ -->
+<!-- ==================== 49 ВОПРОСОВ ==================== -->
 
-<div class="game active" id="croc">
+<div class="game active" id="quiz">
 
 <div class="gameTitle">
-🐊 Крокодил
+🎂 49 вопросов про Васю
 </div>
 
-<div class="muted">
-Показываем слово одному игроку —
-он объясняет без слов. 60 секунд.
-</div>
-
-<div class="word" id="crocWord">
-Нажмите «Новое слово»
-</div>
-
-<div class="btns">
-
-<button class="btn primary" onclick="newCroc()">
-🎲 Новое слово
-</button>
-
-<button class="btn" onclick="crocTimer()">
-⏱️ <span id="crocTime">60</span> сек
-</button>
-
-</div>
-
-<p class="note">
-Совет: передавайте телефон только тому,
-кто показывает слово.
-</p>
-
-</div>
-
-
-<!-- КЕМПИНГ-КВЕСТ -->
-
-<div class="game" id="quest">
-
-<div class="gameTitle">
-🏕️ Кемпинг-квест
-</div>
-
-<div class="muted">
-Случайное задание для компании.
-Выполните его и нажмите следующее.
-</div>
-
-<div class="word" id="questText">
-Готовы?
-</div>
-
-<div class="btns">
-
-<button class="btn primary" onclick="newQuest()">
-🎲 Следующее задание
-</button>
-
-</div>
-
-</div>
-
-
-<!-- У КОСТРА -->
-
-<div class="game" id="fire">
-
-<div class="gameTitle">
-🔥 У костра
-</div>
-
-<div class="muted">
-Вопросы для разговоров, историй
-и неожиданных признаний.
-</div>
-
-<div class="word" id="fireText">
-Нажмите кнопку
-</div>
-
-<div class="btns">
-
-<button class="btn primary" onclick="newFire()">
-🔥 Задать вопрос
-</button>
-
-</div>
-
-</div>
-
-
-<!-- ВИКТОРИНА -->
-
-<div class="game" id="quiz">
-
-<div class="gameTitle">
-🎂 Насколько хорошо вы знаете Васю?
+<div class="gameSub">
+Вопросы перемешиваются. Варианты ответов тоже.
+Один правильный ответ = 1 очко.
 </div>
 
 <div class="score">
 
 <span>
-Вопрос <b id="qNum">1</b>/10
+Вопрос <b id="qNum">1</b>/<span id="qTotal">49</span>
 </span>
 
 <span>
@@ -747,52 +851,176 @@ rel="noopener"
 
 </div>
 
-<div class="card">
+<div class="progress">
+<div id="qProgress"></div>
+</div>
 
-<h3 id="qText">
+<div class="card" id="quizCard">
+
+<div class="quizQuestion" id="qText">
 Загрузка…
-</h3>
+</div>
 
 <div class="choiceGrid" id="choices"></div>
 
+<div class="answerNote" id="answerNote" style="display:none"></div>
+
 </div>
 
-<div class="btns" style="margin-top:10px">
-
-<button class="btn" onclick="restartQuiz()">
-🔄 Начать заново
+<button class="btn primary full" onclick="restartQuiz()">
+🔄 Начать викторину заново
 </button>
 
 </div>
 
-<p class="note">
-Сейчас это универсальная версия.
-Позже можно заменить 10 вопросов
-на персональные факты о Васе.
-</p>
+
+<!-- ==================== КРОКОДИЛ ==================== -->
+
+<div class="game" id="croc">
+
+<div class="gameTitle">
+🐊 Крокодил 2.0
+</div>
+
+<div class="gameSub">
+Показывайте слово жестами. Говорить и издавать звуки нельзя.
+Слова не повторяются, пока колода не закончится.
+</div>
+
+<div class="score">
+
+<span id="crocRound">
+Раунд 0
+</span>
+
+<span>
+Осталось: <b id="crocLeft">0</b>
+</span>
+
+</div>
+
+<div class="word" id="crocWord">
+Нажмите «Новое слово»
+</div>
+
+<div class="crocMeta">
+
+<div>
+<b id="crocCategory">—</b>
+<span>категория</span>
+</div>
+
+<div>
+<b class="timer" id="crocTime">60</b>
+<span>секунд</span>
+</div>
+
+</div>
+
+<div class="btns" style="margin-top:12px">
+
+<button class="btn primary" onclick="newCroc()">
+🎲 Новое слово
+</button>
+
+<button class="btn" onclick="startCrocTimer()">
+▶️ Старт
+</button>
+
+<button class="btn" onclick="stopCrocTimer()">
+⏸️ Стоп
+</button>
+
+<button class="btn" onclick="resetCrocPile()">
+🔄 Новая колода
+</button>
+
+</div>
 
 </div>
 
 
-<!-- МОРСКОЙ БОЙ -->
+<!-- ==================== КВЕСТ ==================== -->
+
+<div class="game" id="quest">
+
+<div class="gameTitle">
+🏕️ Кемпинг-квест
+</div>
+
+<div class="gameSub">
+Командные задания, фотографии, импровизация и немного безумия.
+Можно проходить всем вместе или делиться на команды.
+</div>
+
+<div class="questCard">
+
+<div class="questIcon" id="questIcon">
+🎲
+</div>
+
+<div class="questText" id="questText">
+Готовы? Жмите «Следующее задание».
+</div>
+
+</div>
+
+<button class="btn primary full" onclick="newQuest()">
+🎲 Следующее задание
+</button>
+
+</div>
+
+
+<!-- ==================== У КОСТРА ==================== -->
+
+<div class="game" id="fire">
+
+<div class="gameTitle">
+🔥 У костра
+</div>
+
+<div class="gameSub">
+Вопросы, которые можно задавать по кругу.
+Не хотите отвечать — передавайте ход дальше.
+</div>
+
+<div class="fireQuote" id="fireText">
+Нажмите «Новый вопрос»
+</div>
+
+<div class="fireTag" id="fireTag">
+—
+</div>
+
+<button
+class="btn primary full"
+style="margin-top:14px"
+onclick="newFire()">
+🔥 Новый вопрос
+</button>
+
+</div>
+
+
+<!-- ==================== МОРСКОЙ БОЙ ==================== -->
 
 <div class="game" id="sea">
 
 <div class="gameTitle">
-⚓ Морской бой — 2 игрока
+⚓ Морской бой
 </div>
 
-<div class="muted">
-Локальная версия:
-два человека играют по очереди
-на одном устройстве. Интернет не нужен.
+<div class="gameSub">
+Мини-версия для двух игроков на одном телефоне.
+Интернет не нужен.
 </div>
 
-<div class="axis">
+<div class="seaHead">
 
-<b id="seaTurn">
-Игрок 1 — расстановка
-</b>
+<div>
+<b id="seaTurn">Игрок 1 — расстановка</b>
+</div>
 
 <button class="btn" onclick="restartSea()">
 🔄 Заново
@@ -800,9 +1028,12 @@ rel="noopener"
 
 </div>
 
-<div id="seaInfo" class="note">
-Игрок 1: разместите 3 корабля.
-Корабли длиной 3, 2 и 2.
+<div class="card" style="margin-top:12px">
+
+<div class="muted" id="seaInfo">
+Игрок 1: разместите корабли.
+</div>
+
 </div>
 
 <div class="boardWrap">
@@ -813,72 +1044,133 @@ rel="noopener"
 
 </div>
 
+
+<div class="gamesFooter">
+🏕️ Все игры рассчитаны на компанию и не требуют отдельного приложения.
+</div>
+
 </section>
 
 
-<!-- ЧТО ВЗЯТЬ -->
+<!-- ==================== ЧТО ВЗЯТЬ ==================== -->
 
 <section class="section">
 
-<h2>🎒 Что взять с собой</h2>
+<h2>🎒 Что взять</h2>
 
 <div class="grid">
 
 <div class="card">
-🧥
-<h3>Одежда</h3>
-<span class="muted">
-Тёплый слой и непромокаемую куртку.
-</span>
+<h3>🧥 Одежда</h3>
+<p class="muted">
+Одевайтесь по погоде. Вечером в лесу может быть прохладно.
+</p>
 </div>
 
 <div class="card">
-👟
-<h3>Обувь</h3>
-<span class="muted">
-Удобную обувь для прогулок.
-</span>
+<h3>👟 Обувь</h3>
+<p class="muted">
+Лучше удобная обувь для прогулок по территории.
+</p>
 </div>
 
 <div class="card">
-🔦
-<h3>Фонарик</h3>
-<span class="muted">
-После заката пригодится.
-</span>
+<h3>🔦 Фонарик</h3>
+<p class="muted">
+После заката пригодится обязательно.
+</p>
 </div>
 
 <div class="card">
-🔋
-<h3>Powerbank</h3>
-<span class="muted">
-Чтобы телефон не сел к вечеру.
-</span>
+<h3>🔋 Powerbank</h3>
+<p class="muted">
+Фото, видео, музыка и игры любят заряженный телефон.
+</p>
 </div>
 
 <div class="card">
-🦟
-<h3>От комаров</h3>
-<span class="muted">
-Репеллент по желанию.
-</span>
+<h3>🦟 Репеллент</h3>
+<p class="muted">
+На природе лишним не будет.
+</p>
 </div>
 
 <div class="card">
-😊
-<h3>Настроение</h3>
-<span class="muted">
-Самое главное взять с собой.
-</span>
+<h3>😎 Хорошее настроение</h3>
+<p class="muted">
+Главный пункт списка. Желательно взять с запасом.
+</p>
 </div>
 
 </div>
+
 </section>
 
 
-<!-- МЕСТО -->
+<!-- ==================== ВИДЕО ==================== -->
 
-<section class="section" id="location">
+<section class="section" id="videos">
+
+<h2>🎬 Видео</h2>
+
+<p class="muted">
+Здесь появятся самые смешные, странные и запоминающиеся видео
+с нашего праздника. Можно добавлять ролики с пикника,
+приколы, короткие видео друзей и любые интересные находки.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🏕️ Видео с пикника</h3>
+
+<p class="muted">
+Лучшие моменты 10 октября 2026 года:
+игры, костёр, приключения и неожиданные события.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>😂 Самое смешное</h3>
+
+<p class="muted">
+Ролики, которые хочется пересматривать и отправлять друзьям.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎥 Наши видео</h3>
+
+<p class="muted">
+После праздника сюда можно добавлять собственные видео.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌎 Просто интересно</h3>
+
+<p class="muted">
+Смешные, необычные и красивые видео,
+которые не обязательно связаны с праздником.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== МЕСТО ==================== -->
+
+<section class="section">
 
 <h2>📍 Где встречаемся</h2>
 
@@ -886,12 +1178,12 @@ rel="noopener"
 
 <b>Greenvald Park Scandinavia</b><br>
 
+<span class="muted">
 Ленинградская область, Выборгский район,
-Первомайское сельское поселение,
-посёлок Горки, ул. Озёрная, 1А
+посёлок Горки
+</span>
 
 </div>
-
 
 <div class="btns">
 
@@ -899,28 +1191,63 @@ rel="noopener"
 class="btn primary"
 href="https://yandex.ru/navi/org/grinvald_park_skandinaviya/1298055490?si=53wuhxr1hhj53rnfh7q15jc4fw"
 target="_blank"
-rel="noopener"
->
-🚗 Яндекс Навигатор
+rel="noopener">
+🧭 Яндекс Навигатор
 </a>
 
 <a
 class="btn"
 href="https://yandex.ru/maps/?ll=29.744828%2C60.287649&z=15&pt=29.744828%2C60.287649"
 target="_blank"
-rel="noopener"
->
+rel="noopener">
 🗺️ Яндекс Карты
 </a>
 
+</div>
+
+<iframe
+class="map"
+src="https://www.openstreetmap.org/export/embed.html?bbox=29.725%2C60.275%2C29.765%2C60.300&layer=mapnik&marker=60.287649%2C29.744828">
+</iframe>
+
+</section>
+
+
+<!-- ==================== КАЛЕНДАРЬ ==================== -->
+
+<section class="section">
+
+<h2>📅 Добавить в календарь</h2>
+
+<p class="muted">
+Чтобы не забыть про праздник, добавьте его в календарь телефона.
+</p>
+
+<div class="btns">
+
 <a
-class="btn"
-href="https://park-scandinavia.ru"
-target="_blank"
-rel="noopener"
->
-🌲 Сайт парка
+class="btn primary"
+href="data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20261010T100000%0ADTEND:20261010T220000%0ASUMMARY:%D0%92%D0%B0%D1%81%D1%8F%20%E2%80%94%2038!%20%F0%9F%8F%95%EF%B8%8F%0ALOCATION:Greenvald%20Park%20Scandinavia%0AEND:VEVENT%0AEND:VCALENDAR"
+download="vasya-38.ics">
+📅 Добавить в календарь
 </a>
+
+</div>
+
+</section>
+
+
+<!-- ==================== ПОДЕЛИТЬСЯ ==================== -->
+
+<section class="section">
+
+<h2>📲 Поделиться</h2>
+
+<div class="btns">
+
+<button class="btn primary" onclick="sharePage()">
+📤 Поделиться сайтом
+</button>
 
 <button class="btn" onclick="copyAddress()">
 📋 Скопировать адрес
@@ -928,133 +1255,130 @@ rel="noopener"
 
 </div>
 
-
-<div style="margin-top:14px">
-
-<iframe
-class="map"
-title="Карта"
-loading="lazy"
-src="https://www.openstreetmap.org/export/embed.html?bbox=29.725%2C60.275%2C29.765%2C60.300&layer=mapnik&marker=60.287649%2C29.744828">
-</iframe>
-
-</div>
-
 </section>
 
 
-<!-- ПОЛЕЗНЫЕ КНОПКИ -->
+<footer style="
+text-align:center;
+padding:35px 10px 10px;
+color:var(--muted);
+font-size:12px;
+">
 
-<section class="section">
-
-<h2>📅 Полезные кнопки</h2>
-
-<div class="btns">
-
-<a
-class="btn primary"
-href="data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20261010T070000Z%0ADTEND:20261010T190000Z%0ASUMMARY:%D0%94%D0%B5%D0%BD%D1%8C%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%92%D0%B0%D1%81%D0%B8%0ALOCATION:Greenvald%20Park%20Scandinavia%2C%20%D0%BF.%20%D0%93%D0%BE%D1%80%D0%BA%D0%B8%2C%20%D1%83%D0%BB.%20%D0%9E%D0%B7%D1%91%D1%80%D0%BD%D0%B0%D1%8F%2C%201%D0%90%0AEND:VEVENT%0AEND:VCALENDAR"
-download="vasya-birthday-2026.ics"
->
-📅 Добавить в календарь
-</a>
-
-<button class="btn" onclick="sharePage()">
-📤 Поделиться
-</button>
-
+<div style="font-size:25px;margin-bottom:8px;">
+🏕️ 🔥 🎂 🥳
 </div>
 
-</section>
+<b>Вася — 38!</b>
 
+<br>
 
-<div class="footer">
-Вася · 10 октября 2026 · Greenvald Park Scandinavia 🏕️
-</div>
+10 октября 2026 · Greenvald Park Scandinavia
 
-</div>
+<br><br>
 
+Сделано специально для хорошей компании ❤️
 
-<button
-class="top"
-onclick="scrollTo({top:0,behavior:'smooth'})"
->
-↑
-</button>
-
-
-<div class="bottom">
-
-<a
-class="btn wa"
-href="https://chat.whatsapp.com/IFdvLcc4kXr2IqclBzXVLH?mode=gi_t"
-target="_blank"
-rel="noopener"
->
-💬 WhatsApp
-</a>
-
-<a
-class="btn primary"
-href="#games"
->
-🎮 Игры
-</a>
-
-<a
-class="btn"
-href="#location"
->
-📍 Место
-</a>
+</footer>
 
 </div>
 
 
 <script>
 
+/* ==================== ОБЩИЕ ФУНКЦИИ ==================== */
+
+function shuffleArray(arr){
+
+  const a=[...arr];
+
+  for(let i=a.length-1;i>0;i--){
+
+    const j=Math.floor(Math.random()*(i+1));
+
+    [a[i],a[j]]=[a[j],a[i]];
+
+  }
+
+  return a;
+}
+
+
+function htmlEscape(str){
+
+  return String(str)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+
+}
+
+
+/* ==================== ТАБЫ ИГР ==================== */
+
+document.querySelectorAll(".tab").forEach(tab=>{
+
+  tab.addEventListener("click",()=>{
+
+    document.querySelectorAll(".tab")
+      .forEach(t=>t.classList.remove("active"));
+
+    document.querySelectorAll(".game")
+      .forEach(g=>g.classList.remove("active"));
+
+    tab.classList.add("active");
+
+    document
+      .getElementById(tab.dataset.game)
+      .classList.add("active");
+
+  });
+
+});
+
+
 /* ==================== COUNTDOWN ==================== */
 
-const birthday =
-  new Date("2026-10-10T10:00:00+03:00");
+const eventDate = new Date("2026-10-10T10:00:00+03:00");
 
 function updateCountdown(){
 
-  let d = birthday - Date.now();
+  const now=new Date();
 
-  if(d < 0) d = 0;
+  let diff=eventDate-now;
 
-  let s = Math.floor(d / 1000);
+  if(diff<0){
+    diff=0;
+  }
 
-  let days = Math.floor(s / 86400);
+  const days=Math.floor(diff/86400000);
 
-  s %= 86400;
+  const hours=Math.floor(
+    (diff%86400000)/3600000
+  );
 
-  let h = Math.floor(s / 3600);
+  const minutes=Math.floor(
+    (diff%3600000)/60000
+  );
 
-  s %= 3600;
+  const seconds=Math.floor(
+    (diff%60000)/1000
+  );
 
-  let m = Math.floor(s / 60);
-
-  let sec = s % 60;
-
-  document.querySelector("#count").innerHTML = [
-
+  const values=[
     days,
-    h,
-    m,
-    sec
+    hours,
+    minutes,
+    seconds
+  ];
 
-  ].map((x,i)=>`
-
-    <div>
-      <b>${String(x).padStart(2,"0")}</b>
-      <span>
-        ${["дней","часов","минут","секунд"][i]}
-      </span>
-    </div>
-
-  `).join("");
+  document
+    .querySelectorAll("#count b")
+    .forEach((el,i)=>{
+      el.textContent=values[i];
+    });
 
 }
 
@@ -1063,121 +1387,695 @@ updateCountdown();
 setInterval(updateCountdown,1000);
 
 
-/* ==================== GAME TABS ==================== */
+/* ==================== 49 ВОПРОСОВ ПРО ВАСЮ ==================== */
 
-document
-.querySelectorAll(".tab")
-.forEach(button=>{
+const vasyaQuestions = [
 
-  button.addEventListener("click",()=>{
+  {
+    q:"Когда день рождения Васи?",
+    a:["10 октября","10 сентября","8 марта","31 декабря"],
+    c:"10 октября",
+    note:"Именно 10 октября — дата праздника на этом сайте."
+  },
 
-    document
-    .querySelectorAll(".tab")
-    .forEach(x=>x.classList.remove("active"));
+  {
+    q:"Сколько лет Васе исполняется в 2026 году?",
+    a:["38","37","39","40"],
+    c:"38",
+    note:"В 2026 году Васе — 38."
+  },
 
-    document
-    .querySelectorAll(".game")
-    .forEach(x=>x.classList.remove("active"));
+  {
+    q:"В каком месяце проходит праздник?",
+    a:["Октябрь","Август","Май","Декабрь"],
+    c:"Октябрь",
+    note:"Осенний день рождения — зато с настоящей атмосферой кемпинга."
+  },
 
-    button.classList.add("active");
+  {
+    q:"Во сколько начинается встреча?",
+    a:["10:00","09:00","12:00","14:00"],
+    c:"10:00",
+    note:"Старт программы — в 10:00."
+  },
 
-    document
-    .getElementById(button.dataset.game)
-    .classList.add("active");
+  {
+    q:"Во сколько планируется финал?",
+    a:["22:00","20:00","23:30","18:00"],
+    c:"22:00",
+    note:"К 22:00 заканчиваем праздник и разъезжаемся."
+  },
 
-  });
+  {
+    q:"Какой главный формат праздника?",
+    a:["Пикник и кемпинг","Бал-маскарад","Деловая конференция","Экзамен"],
+    c:"Пикник и кемпинг",
+    note:"Именно поэтому здесь столько игр и заданий."
+  },
 
-});
+  {
+    q:"Где проходит праздник?",
+    a:["Greenvald Park Scandinavia","Эрмитаж","Петергоф","Москва-Сити"],
+    c:"Greenvald Park Scandinavia",
+    note:"Праздничная база — Greenvald Park Scandinavia."
+  },
 
+  {
+    q:"В каком районе находится место встречи?",
+    a:["Выборгский район","Петроградский район","Курортный район Москвы","Адмиралтейский район"],
+    c:"Выборгский район",
+    note:"Это Ленинградская область, Выборгский район."
+  },
 
-/* ==================== КРОКОДИЛ ==================== */
+  {
+    q:"Что лучше всего взять после заката?",
+    a:["Фонарик","Солнцезащитные очки","Лыжи","Пляжный зонт"],
+    c:"Фонарик",
+    note:"В списке вещей фонарик не случайно."
+  },
 
-const crocWords = [
+  {
+    q:"Что точно пригодится для телефона?",
+    a:["Powerbank","DVD-плеер","Принтер","Сканер"],
+    c:"Powerbank",
+    note:"Игры, фото и видео любят заряд батареи."
+  },
 
-  "палатка",
-  "костёр",
-  "мангал",
-  "рюкзак",
-  "компас",
-  "спальный мешок",
-  "фонарик",
-  "термос",
-  "дождевик",
-  "комар",
-  "медведь",
-  "турист",
-  "рыбалка",
-  "шашлык",
-  "гитара",
-  "баня",
-  "озеро",
-  "сосна",
-  "поход",
-  "пикник",
-  "бутерброд",
-  "дрова",
-  "шампур",
-  "чайник",
-  "велосипед",
-  "фотоаппарат",
-  "будильник",
-  "такси",
-  "самолёт",
-  "танец",
-  "директор",
-  "детектив",
-  "страховка",
-  "автомобиль",
-  "судья",
-  "путешествие"
+  {
+    q:"В каком городе Вася проживает последние годы?",
+    a:["Санкт-Петербург","Омск","Казань","Владивосток"],
+    c:"Санкт-Петербург",
+    note:"Санкт-Петербург стал главным городом его взрослой жизни."
+  },
+
+  {
+    q:"Где Вася родился?",
+    a:["Омск","Санкт-Петербург","Новосибирск","Москва"],
+    c:"Омск",
+    note:"Омск — город рождения Васи."
+  },
+
+  {
+    q:"Какое образование у Васи лежит в основе его карьеры?",
+    a:["Юридическое","Архитектурное","Музыкальное","Лингвистическое"],
+    c:"Юридическое",
+    note:"Право — фундамент его профессионального пути."
+  },
+
+  {
+    q:"С какой сферой был связан большой кусок его профессиональной жизни?",
+    a:["Правоохранительная и юридическая","Киноиндустрия","Ресторанный бизнес","Авиация"],
+    c:"Правоохранительная и юридическая",
+    note:"Следствие, прокуратура и суд — далеко не случайные слова в биографии."
+  },
+
+  {
+    q:"Какую тему Вася сейчас активно осваивает?",
+    a:["IT и информационную безопасность","Гончарное дело","Парусный спорт","Сомелье"],
+    c:"IT и информационную безопасность",
+    note:"Следующий карьерный этап — на стыке права, данных, IT и security."
+  },
+
+  {
+    q:"Какая область особенно интересует Васю в IT?",
+    a:["Cybersecurity / GRC / governance","3D-мультфильмы","Мобильные игры как профессия","Музыкальный продакшн"],
+    c:"Cybersecurity / GRC / governance",
+    note:"Безопасность, риск, compliance и governance — один из главных векторов."
+  },
+
+  {
+    q:"Что Вася изучает параллельно с IT?",
+    a:["Английский язык","Итальянскую кухню","Латынь для врачей","Китайскую каллиграфию"],
+    c:"Английский язык",
+    note:"Английский нужен и для карьеры, и для будущих путешествий."
+  },
+
+  {
+    q:"Какой экзамен по английскому Вася рассматривает как основной?",
+    a:["PTE Academic","DELE","JLPT","Goethe-Zertifikat"],
+    c:"PTE Academic",
+    note:"PTE — основной ориентир в его языковом плане."
+  },
+
+  {
+    q:"Какая страна сейчас особенно интересует Васю для переезда?",
+    a:["Новая Зеландия","Исландия","Бразилия","Египет"],
+    c:"Новая Зеландия",
+    note:"Новая Зеландия — приоритетное направление его долгосрочного плана."
+  },
+
+  {
+    q:"Какая страна также находится в его планах?",
+    a:["Австралия","Мексика","Норвегия","Индия"],
+    c:"Австралия",
+    note:"Австралия — второй крупный англоязычный вариант."
+  },
+
+  {
+    q:"Какой вид спорта/активности регулярно интересует Васю?",
+    a:["Плавание","Гольф","Бокс","Скалолазание"],
+    c:"Плавание",
+    note:"Плавание — одна из отслеживаемых спортивных активностей."
+  },
+
+  {
+    q:"Какой гаджет используется для отслеживания активности?",
+    a:["Mi Band 9","Nintendo DS","GoPro Hero 2","Kindle"],
+    c:"Mi Band 9",
+    note:"Mi Band 9 используется вместе с Mi Fitness и Apple Health."
+  },
+
+  {
+    q:"Какой телефон сейчас используется в этой системе?",
+    a:["iPhone 16e","Nokia 3310","iPhone 8","Pixel 3"],
+    c:"iPhone 16e",
+    note:"Главный телефон в экосистеме здоровья — iPhone 16e."
+  },
+
+  {
+    q:"Какую экосистему Вася использует для анализа здоровья?",
+    a:["Apple Health","Steam Health","PlayStation Health","Telegram Health"],
+    c:"Apple Health",
+    note:"Apple Health — центральная точка сбора данных."
+  },
+
+  {
+    q:"Какой тип питания/режима Вася изучает как один из инструментов здоровья?",
+    a:["Интервальное голодание","Только сыроедение","Полное голодание на месяц","Только фастфуд"],
+    c:"Интервальное голодание",
+    note:"Он интересовался периодическим интервальным голоданием и его влиянием на здоровье."
+  },
+
+  {
+    q:"Какая страна была в поездке Васи в 2018 году?",
+    a:["Таиланд","Канада","Португалия","Корея"],
+    c:"Таиланд",
+    note:"Таиланд — поездка 2018 года."
+  },
+
+  {
+    q:"Какие направления были в поездке 2023 года?",
+    a:["Дубай и Оман","Париж и Лондон","Токио и Киото","Рим и Вена"],
+    c:"Дубай и Оман",
+    note:"В 2023 году — Дубай + Оман."
+  },
+
+  {
+    q:"Куда Вася ездил в 2024 году?",
+    a:["Азербайджан","Грузия","Сербия","Армения"],
+    c:"Азербайджан",
+    note:"Азербайджан — путешествие 2024 года."
+  },
+
+  {
+    q:"Куда была поездка в 2025 году?",
+    a:["Турция","Испания","Вьетнам","Черногория"],
+    c:"Турция",
+    note:"Турция — поездка 2025 года."
+  },
+
+  {
+    q:"Какой город Африки особенно интересовал Васю для английского?",
+    a:["Кейптаун","Каир","Найроби","Касабланка"],
+    c:"Кейптаун",
+    note:"Кейптаун рассматривался как сочетание английского, путешествия и подготовки к PTE."
+  },
+
+  {
+    q:"В какой сфере Вася сейчас работает?",
+    a:["Страхование и anti-fraud","Ресторанный бизнес","Строительство мостов","Издательское дело"],
+    c:"Страхование и anti-fraud",
+    note:"Работа связана с противодействием страховому мошенничеству."
+  },
+
+  {
+    q:"С какими видами автострахования связан его рабочий контекст?",
+    a:["КАСКО и ОСАГО","Только ДМС","Только страхование жизни","Только туристическая страховка"],
+    c:"КАСКО и ОСАГО",
+    note:"В центре — автомобильное страхование, КАСКО и ОСАГО."
+  },
+
+  {
+    q:"Что в этой работе особенно важно находить?",
+    a:["Признаки страхового мошенничества","Лучший рецепт шашлыка","Музыкальные хиты","Туристические сувениры"],
+    c:"Признаки страхового мошенничества",
+    note:"Это буквально суть anti-fraud."
+  },
+
+  {
+    q:"Какая технология особенно полезна для анализа больших объёмов данных?",
+    a:["SQL","Факс","Пишущая машинка","Плёнка"],
+    c:"SQL",
+    note:"SQL — один из базовых инструментов, который Вася изучал в аналитике данных."
+  },
+
+  {
+    q:"Какой язык/среда используется для автоматизации и анализа данных?",
+    a:["Python","Fortran 77 только","BASIC на кассетах","Pascal на бумаге"],
+    c:"Python",
+    note:"Python используется в его IT-проектах."
+  },
+
+  {
+    q:"Какой формат отдыха больше всего подходит Васе в этот день?",
+    a:["Природа, костёр и хорошая компания","Офисное совещание","Шопинг в торговом центре","Тихий вечер за рабочим ноутбуком"],
+    c:"Природа, костёр и хорошая компания",
+    note:"Сегодня ноутбук можно отложить — главное место занимают природа, игры и друзья."
+  },
+
+  {
+    q:"Что Вася скорее всего выберет для запоминающегося путешествия?",
+    a:["Новую страну, впечатления и возможность попрактиковать английский","Только номер в отеле без выхода наружу","Деловую конференцию на весь отпуск","Путешествие исключительно ради сувениров"],
+    c:"Новую страну, впечатления и возможность попрактиковать английский",
+    note:"Для Васи путешествие — это не только отдых, но и новый опыт."
+  },
+
+  {
+    q:"Какой навык особенно пригодится Васе в новой международной жизни?",
+    a:["Английский язык","Умение складывать оригами одной рукой","Профессиональная дегустация лимонада","Навык печатать на машинке"],
+    c:"Английский язык",
+    note:"Английский — один из ключевых навыков для его будущих планов."
+  },
+
+  {
+    q:"Что лучше всего описывает идеальный день рождения Васи?",
+    a:["Друзья, природа, игры, вкусная еда и много смеха","Три часа совещаний","Один человек и выключенный телефон","Экзамен с контрольной работой"],
+    c:"Друзья, природа, игры, вкусная еда и много смеха",
+    note:"Собственно, именно такой день сегодня и пытаемся устроить."
+  },
+
+  {
+    q:"Какой проект появился на этом сайте кроме приглашения?",
+    a:["Игры для компании","Онлайн-магазин","Кулинарный блог","Сервис такси"],
+    c:"Игры для компании",
+    note:"Сайт постепенно превращается в настоящий camp game center."
+  },
+
+  {
+    q:"Что стало одной из идей для сайта?",
+    a:["Видео с пикника и смешные ролики","Онлайн-банк","Фотогалерея с котиками","Курс английской грамматики"],
+    c:"Видео с пикника и смешные ролики",
+    note:"После праздника сайт можно превратить в цифровой альбом встречи."
+  },
+
+  {
+    q:"Какой мессенджер используется для группы гостей?",
+    a:["WhatsApp","Signal","Discord","ICQ"],
+    c:"WhatsApp",
+    note:"Организационные вопросы идут через WhatsApp-группу."
+  },
+
+  {
+    q:"Какой стиль у сайта?",
+    a:["Лесной кемпинг / пикник","Киберпанк-неон","Офисный минимализм","Средневековый замок"],
+    c:"Лесной кемпинг / пикник",
+    note:"Всё специально сделано под атмосферу загородного праздника."
+  },
+
+  {
+    q:"Что важнее всего взять на день рождения?",
+    a:["Хорошее настроение","Сейф","Принтер","Домашний телевизор"],
+    c:"Хорошее настроение",
+    note:"Это единственная вещь, которую невозможно забыть дома — если прийти вовремя."
+  },
+
+  {
+    q:"Что логично сделать после сложного раунда викторины?",
+    a:["Пойти к костру","Сдать отчёт","Открыть совещание","Искать Wi-Fi в лесу"],
+    c:"Пойти к костру",
+    note:"После 49 вопросов нужен отдых и огонь."
+  },
+
+  {
+    q:"Какой финальный приз у победителя викторины на этом сайте?",
+    a:["Право первым выбрать песню у костра","Новая машина","Путёвка на Мальдивы","Должность директора"],
+    c:"Право первым выбрать песню у костра",
+    note:"Скромно, но зато реально."
+  },
+
+  {
+    q:"Какой девиз лучше всего подходит этому празднику?",
+    a:["Едем, играем, смеёмся","Работаем до ночи","Не разговариваем","Все по домам в 12:00"],
+    c:"Едем, играем, смеёмся",
+    note:"Вот ради этого всё и затевалось."
+  },
+
+  {
+    q:"Что должен сделать хороший гость, если опаздывает?",
+    a:["Написать в WhatsApp","Исчезнуть бесследно","Позвонить в редакцию журнала","Ждать до следующего дня"],
+    c:"Написать в WhatsApp",
+    note:"Организационные вопросы — в группе гостей."
+  },
+
+  {
+    q:"Что объединяет этот праздник, сайт и игры?",
+    a:["Идея сделать обычную встречу приключением","Экзамен","Рабочая планёрка","Рекламная кампания"],
+    c:"Идея сделать обычную встречу приключением",
+    note:"Главная идея — не просто встретиться, а создать воспоминание."
+  }
 
 ];
 
-let crocInterval;
+
+let quizDeck=[];
+let qi=0;
+let qs=0;
+let quizAnswered=0;
 
 
-function newCroc(){
+function restartQuiz(){
 
-  document
-  .getElementById("crocWord")
-  .textContent =
-  crocWords[
-    Math.floor(Math.random()*crocWords.length)
-  ];
+  quizDeck=shuffleArray(vasyaQuestions);
 
-  clearInterval(crocInterval);
+  qi=0;
+  qs=0;
+  quizAnswered=0;
 
-  document
-  .getElementById("crocTime")
-  .textContent="60";
+  document.getElementById("qTotal").textContent=quizDeck.length;
+  document.getElementById("qScore").textContent="0";
+
+  renderQuiz();
 
 }
 
 
-function crocTimer(){
+function renderQuiz(){
+
+  const card=document.getElementById("quizCard");
+
+  if(qi>=quizDeck.length){
+
+    const pct=Math.round(
+      (qs/quizDeck.length)*100
+    );
+
+    let emoji="🙂";
+    let title="Неплохо!";
+
+    if(pct>=90){
+      emoji="🏆";
+      title="Вася знает тебя лично!";
+    }else if(pct>=75){
+      emoji="🔥";
+      title="Очень достойно!";
+    }else if(pct>=55){
+      emoji="😎";
+      title="Есть потенциал!";
+    }else if(pct>=35){
+      emoji="😂";
+      title="Пора чаще общаться с Васей!";
+    }else{
+      emoji="🤔";
+      title="Кажется, пора знакомиться заново!";
+    }
+
+    document.getElementById("qProgress").style.width="100%";
+
+    card.innerHTML=`
+
+      <div class="quizResult">
+
+        <div class="resultEmoji">
+          ${emoji}
+        </div>
+
+        <div class="resultTitle">
+          ${title}
+        </div>
+
+        <div class="resultScore">
+          ${qs} из ${quizDeck.length} · ${pct}%
+        </div>
+
+        <div class="quizMini">
+
+          <div>
+            <b>${qs}</b>
+            <span>правильно</span>
+          </div>
+
+          <div>
+            <b>${quizDeck.length-qs}</b>
+            <span>ошибок</span>
+          </div>
+
+          <div>
+            <b>${quizDeck.length}</b>
+            <span>вопросов</span>
+          </div>
+
+        </div>
+
+        <p class="muted">
+          Спасибо за участие! Теперь можно идти к костру,
+          спорить о результатах и рассказывать свои версии ответов 😄
+        </p>
+
+      </div>
+
+    `;
+
+    return;
+  }
+
+
+  const item=quizDeck[qi];
+
+  const answers=shuffleArray(item.a);
+
+  document.getElementById("qNum").textContent=qi+1;
+
+  document.getElementById("qScore").textContent=qs;
+
+  document.getElementById("qProgress").style.width=
+    `${(qi/quizDeck.length)*100}%`;
+
+  card.innerHTML=`
+
+    <div class="quizQuestion" id="qText">
+      ${htmlEscape(item.q)}
+    </div>
+
+    <div class="choiceGrid" id="choices"></div>
+
+    <div
+      class="answerNote"
+      id="answerNote"
+      style="display:none">
+    </div>
+
+  `;
+
+  const choices=document.getElementById("choices");
+
+  answers.forEach(answer=>{
+
+    const btn=document.createElement("button");
+
+    btn.className="choice";
+
+    btn.textContent=answer;
+
+    btn.onclick=()=>answerQuiz(
+      btn,
+      answer,
+      item
+    );
+
+    choices.appendChild(btn);
+
+  });
+
+}
+
+
+function answerQuiz(clicked,answer,item){
+
+  const buttons=[
+    ...document.querySelectorAll(".choice")
+  ];
+
+  buttons.forEach(b=>{
+    b.disabled=true;
+  });
+
+  const correct=answer===item.c;
+
+  const right=buttons.find(
+    b=>b.textContent===item.c
+  );
+
+  if(correct){
+
+    qs++;
+
+    clicked.classList.add("correct");
+
+  }else{
+
+    clicked.classList.add("wrong");
+
+    right?.classList.add("correct");
+
+  }
+
+  quizAnswered++;
+
+  document.getElementById("qScore").textContent=qs;
+
+  const note=document.getElementById("answerNote");
+
+  note.style.display="block";
+
+  note.innerHTML=
+    `${correct ? "✅ Правильно!" : "❌ Не угадали."} ${htmlEscape(item.note)}`;
+
+  setTimeout(()=>{
+
+    qi++;
+
+    renderQuiz();
+
+  },1050);
+
+}
+
+
+restartQuiz();
+
+
+/* ==================== КРОКОДИЛ 2.0 ==================== */
+
+const crocDeck=[
+
+  ["Кемпинг","палатка"],
+  ["Кемпинг","костёр"],
+  ["Кемпинг","мангал"],
+  ["Кемпинг","рюкзак"],
+  ["Кемпинг","компас"],
+  ["Кемпинг","спальный мешок"],
+  ["Кемпинг","фонарик"],
+  ["Кемпинг","термос"],
+  ["Кемпинг","дождевик"],
+  ["Кемпинг","комар"],
+  ["Кемпинг","рыбалка"],
+  ["Кемпинг","поход"],
+  ["Кемпинг","пикник"],
+  ["Кемпинг","дрова"],
+  ["Кемпинг","шампур"],
+  ["Кемпинг","чайник"],
+  ["Кемпинг","озеро"],
+  ["Кемпинг","сосна"],
+  ["Кемпинг","велосипед"],
+  ["Кемпинг","будильник"],
+
+  ["Вася","детектив"],
+  ["Вася","страховка"],
+  ["Вася","автомобиль"],
+  ["Вася","судья"],
+  ["Вася","юрист"],
+  ["Вася","следователь"],
+  ["Вася","аналитик"],
+  ["Вася","Python"],
+  ["Вася","SQL"],
+  ["Вася","хакер"],
+  ["Вася","Новая Зеландия"],
+  ["Вася","Кейптаун"],
+  ["Вася","PTE"],
+  ["Вася","путешествие"],
+  ["Вася","рюкзак"],
+
+  ["Праздник","торт"],
+  ["Праздник","тост"],
+  ["Праздник","танец"],
+  ["Праздник","караоке"],
+  ["Праздник","фотография"],
+  ["Праздник","день рождения"],
+  ["Праздник","гитара"],
+  ["Праздник","плед"],
+  ["Праздник","шашлык"],
+  ["Праздник","дождь"],
+  ["Праздник","дружба"],
+  ["Праздник","смех"]
+
+];
+
+
+let crocPile=[];
+let crocRound=0;
+let crocInterval=null;
+
+
+function resetCrocPile(){
+
+  crocPile=shuffleArray(crocDeck);
+
+  document.getElementById("crocLeft").textContent=
+    crocPile.length;
+
+}
+
+
+function newCroc(){
+
+  if(!crocPile.length){
+    resetCrocPile();
+  }
+
+  const [category,word]=crocPile.pop();
+
+  crocRound++;
+
+  document.getElementById("crocCategory").textContent=
+    category;
+
+  document.getElementById("crocWord").textContent=
+    word;
+
+  document.getElementById("crocRound").textContent=
+    `Раунд ${crocRound}`;
+
+  document.getElementById("crocLeft").textContent=
+    crocPile.length;
+
+  stopCrocTimer();
+
+  document.getElementById("crocTime").textContent="60";
+
+  document.getElementById("crocTime")
+    .classList.remove("hot");
+
+}
+
+
+function startCrocTimer(){
 
   clearInterval(crocInterval);
 
-  let t = 60;
+  let t=60;
 
-  document
-  .getElementById("crocTime")
-  .textContent=t;
+  const el=document.getElementById("crocTime");
+
+  el.textContent=t;
+
+  el.classList.remove("hot");
 
   crocInterval=setInterval(()=>{
 
     t--;
 
-    document
-    .getElementById("crocTime")
-    .textContent=t;
+    el.textContent=t;
+
+    if(t<=10){
+      el.classList.add("hot");
+    }
 
     if(t<=0){
 
       clearInterval(crocInterval);
 
       if(navigator.vibrate){
-        navigator.vibrate(300);
+        navigator.vibrate([150,80,150]);
       }
 
     }
@@ -1187,293 +2085,230 @@ function crocTimer(){
 }
 
 
+function stopCrocTimer(){
+
+  clearInterval(crocInterval);
+
+  crocInterval=null;
+
+}
+
+
+resetCrocPile();
+
+
 /* ==================== КЕМПИНГ-КВЕСТ ==================== */
 
-const quests = [
+const quests=[
 
-  "Найдите человека, которого знаете меньше всего, и познакомьтесь.",
+  [
+    "📸",
+    "Сделайте фото всей компанией так, чтобы в кадре было видно дерево."
+  ],
 
-  "Сделайте общее фото всей компанией.",
+  [
+    "🤝",
+    "Найдите человека, с которым сегодня ещё почти не разговаривали, и узнайте о нём один неожиданный факт."
+  ],
 
-  "Найдите самое необычное дерево рядом.",
+  [
+    "🌲",
+    "Найдите самое необычное дерево рядом и придумайте ему имя."
+  ],
 
-  "Придумайте название сегодняшней команде.",
+  [
+    "🎬",
+    "За 20 секунд снимите трейлер фильма «Вася и 38 лет приключений»."
+  ],
 
-  "Соберите команду из 3 человек и изобразите поход без слов.",
+  [
+    "😂",
+    "Изобразите без слов человека, который впервые приехал в кемпинг."
+  ],
 
-  "Найдите предмет, который можно использовать не по назначению.",
+  [
+    "🎤",
+    "Придумайте тост ровно из пяти слов."
+  ],
 
-  "Придумайте тост из ровно пяти слов.",
+  [
+    "🏕️",
+    "За 30 секунд придумайте название сегодняшней команде."
+  ],
 
-  "За 30 секунд придумайте рекламный слоган для этого пикника.",
+  [
+    "🕵️",
+    "Найдите человека, который знает Васю дольше всех, и задайте ему один вопрос о Васе."
+  ],
 
-  "Найдите человека с самым необычным фактом о себе.",
+  [
+    "💃",
+    "Вся команда одновременно делает одно и то же движение 10 секунд."
+  ],
 
-  "Сделайте 10 приседаний всей командой.",
+  [
+    "🔥",
+    "Придумайте рекламу сегодняшнего костра как будто это премиальный ресторан."
+  ],
 
-  "Изобразите костёр, не произнося ни слова.",
+  [
+    "📱",
+    "Сделайте фото, которое лучше всего передаёт атмосферу этого дня."
+  ],
 
-  "Найдите человека, который сегодня приехал дальше всех."
+  [
+    "🧠",
+    "За минуту придумайте три способа провести следующий день рождения ещё необычнее."
+  ],
+
+  [
+    "🎭",
+    "Три человека изображают поход без слов, остальные угадывают."
+  ],
+
+  [
+    "🥤",
+    "Найдите человека с самым необычным напитком и узнайте его рецепт."
+  ],
+
+  [
+    "🏆",
+    "Выберите самого азартного игрока дня и вручите ему воображаемую медаль."
+  ],
+
+  [
+    "🌧️",
+    "Представьте, что пошёл сильный дождь. За 30 секунд придумайте план спасения праздника."
+  ],
+
+  [
+    "😎",
+    "Найдите человека, который приехал дальше всех, и объявите его героем путешествия."
+  ],
+
+  [
+    "🎵",
+    "Каждый участник по очереди добавляет одно слово в песню про этот пикник."
+  ],
+
+  [
+    "🎂",
+    "Придумайте альтернативное название «Вася — 38!»."
+  ],
+
+  [
+    "🚀",
+    "Представьте, что завтра вся компания улетает в любую страну. Куда?"
+  ]
 
 ];
+
+
+let questDeck=[];
+
+
+function resetQuest(){
+
+  questDeck=shuffleArray(quests);
+
+  document.getElementById("questText").textContent=
+    "Готовы? Жмите «Следующее задание».";
+
+  document.getElementById("questIcon").textContent="🎲";
+
+}
 
 
 function newQuest(){
 
-  document
-  .getElementById("questText")
-  .textContent =
-  quests[
-    Math.floor(Math.random()*quests.length)
-  ];
+  if(!questDeck.length){
+    questDeck=shuffleArray(quests);
+  }
+
+  const [icon,text]=questDeck.pop();
+
+  document.getElementById("questIcon").textContent=
+    icon;
+
+  document.getElementById("questText").textContent=
+    text;
 
 }
+
+
+resetQuest();
 
 
 /* ==================== У КОСТРА ==================== */
 
-const fireQs = [
+const fireQs=[
 
-  "Какое путешествие ты хотел бы повторить?",
+  ["лёгкий старт","Какое путешествие ты хотел бы повторить?"],
 
-  "Самое смешное приключение в твоей жизни?",
+  ["история","Самое смешное приключение в твоей жизни?"],
 
-  "Куда бы ты уехал на месяц прямо завтра?",
+  ["мечта","Куда бы ты уехал на месяц прямо завтра?"],
 
-  "Какой навык ты хотел бы получить за один день?",
+  ["мечта","Какой навык ты хотел бы получить за один день?"],
 
-  "Какой фильм можешь пересматривать бесконечно?",
+  ["кино","Какой фильм можешь пересматривать бесконечно?"],
 
-  "Самая спонтанная покупка, о которой не жалеешь?",
+  ["история","Какая самая спонтанная покупка оказалась удачной?"],
 
-  "Какой совет ты дал бы себе десять лет назад?",
+  ["жизнь","Какой совет ты дал бы себе десять лет назад?"],
 
-  "Что обязательно должно быть в идеальном походе?",
+  ["кемпинг","Что обязательно должно быть в идеальном походе?"],
 
-  "Какой момент этого года запомнился больше всего?",
+  ["2026","Какой момент этого года хочется запомнить надолго?"],
 
-  "Кем бы ты стал, если бы не занимался своей нынешней работой?",
+  ["карьера","Кем бы ты стал, если бы мог полностью сменить профессию?"],
 
-  "Какой подарок тебе запомнился сильнее всего?",
+  ["подарки","Какой подарок тебе запомнился сильнее всего?"],
 
-  "Какое блюдо ты готов есть хоть каждую неделю?",
+  ["еда","Какое блюдо ты готов есть хоть каждую неделю?"],
 
-  "Что тебя гарантированно рассмешит?",
+  ["смех","Что тебя гарантированно рассмешит?"],
 
-  "Какую страну хочешь посетить следующей?"
+  ["путешествия","Какую страну хочешь посетить следующей?"],
+
+  ["дружба","Какой человек обычно сразу располагает тебя к себе?"],
+
+  ["авантюра","Какую безумную идею ты однажды всё-таки хотел бы реализовать?"],
+
+  ["ностальгия","Какой возраст своей жизни ты бы с удовольствием прожил ещё раз на один день?"],
+
+  ["Вася","Какой вопрос ты давно хотел задать Васе?"],
+
+  ["компания","Что обязательно нужно повторить после сегодняшнего праздника?"],
+
+  ["финал","Что ты хочешь пожелать Васе на следующие 38 лет?"]
 
 ];
+
+
+let fireDeck=[];
 
 
 function newFire(){
 
-  document
-  .getElementById("fireText")
-  .textContent =
-  fireQs[
-    Math.floor(Math.random()*fireQs.length)
-  ];
-
-}
-
-
-/* ==================== ВИКТОРИНА ==================== */
-
-const quiz = [
-
-[
-  "Какой сегодня повод?",
-  ["День рождения Васи","Новый год","Корпоратив","Свадьба"],
-  0
-],
-
-[
-  "Где проходит праздник?",
-  ["Greenvald Park Scandinavia","Эрмитаж","Москва-Сити","Дом Васи"],
-  0
-],
-
-[
-  "В каком месяце праздник?",
-  ["Октябре","Июле","Декабре","Феврале"],
-  0
-],
-
-[
-  "Во сколько начинается праздник?",
-  ["10:00","08:00","12:00","18:00"],
-  0
-],
-
-[
-  "Какой формат праздника?",
-  ["Пикник и кемпинг","Бал","Конференция","Экскурсия"],
-  0
-],
-
-[
-  "Что особенно пригодится вечером?",
-  ["Фонарик","Лыжи","Паспорт моряка","Зонтик от солнца"],
-  0
-],
-
-[
-  "Какой раздел сайта отвечает за развлечения?",
-  ["🎮 Игры","Финансы","Новости","Работа"],
-  0
-],
-
-[
-  "Что можно сделать в WhatsApp-группе?",
-  ["Обсудить организацию","Купить билет на самолёт","Сдать экзамен","Заказать такси автоматически"],
-  0
-],
-
-[
-  "Что главное взять на праздник?",
-  ["Хорошее настроение","Телевизор","Принтер","Сейф"],
-  0
-],
-
-[
-  "Что будет вечером?",
-  ["Костёр и торт","Самолёт","Экзамен","Совещание"],
-  0
-]
-
-];
-
-
-let qi = 0;
-
-let qs = 0;
-
-
-function renderQuiz(){
-
-  if(qi >= quiz.length){
-
-    document
-    .getElementById("qText")
-    .textContent =
-    `🎉 Викторина окончена! Результат: ${qs}/${quiz.length}`;
-
-    document
-    .getElementById("choices")
-    .innerHTML = `
-
-      <button
-      class="btn primary full"
-      onclick="restartQuiz()"
-      >
-      Пройти ещё раз
-      </button>
-
-    `;
-
-    return;
-
+  if(!fireDeck.length){
+    fireDeck=shuffleArray(fireQs);
   }
 
+  const [tag,text]=fireDeck.pop();
 
-  document
-  .getElementById("qNum")
-  .textContent = qi + 1;
+  document.getElementById("fireTag").textContent=
+    tag;
 
-
-  document
-  .getElementById("qScore")
-  .textContent = qs;
-
-
-  document
-  .getElementById("qText")
-  .textContent = quiz[qi][0];
-
-
-  document
-  .getElementById("choices")
-  .innerHTML =
-  quiz[qi][1]
-  .map((x,i)=>`
-
-    <button
-    class="choice"
-    onclick="answerQuiz(${i})"
-    >
-    ${x}
-    </button>
-
-  `)
-  .join("");
+  document.getElementById("fireText").textContent=
+    text;
 
 }
-
-
-function answerQuiz(i){
-
-  let buttons =
-    [...document.querySelectorAll("#choices .choice")];
-
-  buttons.forEach(
-    b => b.disabled = true
-  );
-
-
-  if(i === quiz[qi][2]){
-
-    buttons[i]
-    .classList
-    .add("correct");
-
-    qs++;
-
-  }else{
-
-    buttons[i]
-    .classList
-    .add("wrong");
-
-    buttons[quiz[qi][2]]
-    .classList
-    .add("correct");
-
-  }
-
-
-  document
-  .getElementById("qScore")
-  .textContent = qs;
-
-
-  setTimeout(()=>{
-
-    qi++;
-
-    renderQuiz();
-
-  },700);
-
-}
-
-
-function restartQuiz(){
-
-  qi=0;
-
-  qs=0;
-
-  renderQuiz();
-
-}
-
-
-renderQuiz();
 
 
 /* ==================== МОРСКОЙ БОЙ ==================== */
 
-let sea = {
+let sea={
 
   turn:1,
 
@@ -1496,7 +2331,7 @@ let sea = {
 
 function restartSea(){
 
-  sea = {
+  sea={
 
     turn:1,
 
@@ -1523,40 +2358,37 @@ function restartSea(){
 
 function renderSea(){
 
-  const board =
-    document.getElementById("seaBoard");
+  const board=document.getElementById("seaBoard");
 
   board.innerHTML="";
 
+  document.getElementById("seaTurn").textContent=
 
-  document
-  .getElementById("seaTurn")
-  .textContent =
-  sea.phase==="place"
-  ?
-  `Игрок ${sea.turn} — расстановка`
-  :
-  `Ход игрока ${sea.turn}`;
+    sea.phase==="place"
+      ? `Игрок ${sea.turn} — расстановка`
+
+      : sea.phase==="battle"
+      ? `Ход игрока ${sea.turn}`
+
+      : "🏆 Игра окончена";
 
 
-  document
-  .getElementById("seaInfo")
-  .textContent =
-  sea.phase==="place"
-  ?
-  `Игрок ${sea.turn}: разместите корабли. Сейчас размещается корабль №${sea.placed+1}. Длина: ${[3,2,2][sea.placed]||0}. Нажимайте клетки подряд по горизонтали.`
-  :
-  sea.phase==="battle"
-  ?
-  `Игрок ${sea.turn}: выберите клетку противника. После выстрела передайте телефон другому игроку.`
-  :
-  `🏆 Игра окончена! Нажмите «Заново», чтобы сыграть ещё раз.`;
+  document.getElementById("seaInfo").textContent=
+
+    sea.phase==="place"
+
+      ? `Игрок ${sea.turn}: разместите корабли. Сейчас корабль №${sea.placed+1}, длина ${[3,2,2][sea.placed]||0}. Кликайте начальную клетку — корабль ставится вправо.`
+
+      : sea.phase==="battle"
+
+      ? `Игрок ${sea.turn}: выберите клетку противника. После выстрела передайте телефон другому игроку.`
+
+      : "Победа! Нажмите «Заново», чтобы сыграть ещё раз.";
 
 
   for(let r=0;r<6;r++){
 
-    let lab =
-      document.createElement("div");
+    const lab=document.createElement("div");
 
     lab.className="small";
 
@@ -1567,8 +2399,7 @@ function renderSea(){
 
     for(let c=0;c<6;c++){
 
-      let el =
-        document.createElement("button");
+      const el=document.createElement("button");
 
       el.className="cell";
 
@@ -1577,16 +2408,12 @@ function renderSea(){
         `${r+1},${c+1}`
       );
 
-
-      el.onclick=()=>{
-        seaClick(r,c);
-      };
+      el.onclick=()=>seaClick(r,c);
 
 
       if(
         sea.phase==="place" &&
-        sea.ships[sea.turn]
-        .some(
+        sea.ships[sea.turn].some(
           p=>p[0]===r && p[1]===c
         )
       ){
@@ -1598,20 +2425,15 @@ function renderSea(){
 
       if(sea.phase==="battle"){
 
-        let shot =
-          sea.shots[sea.turn]
-          .find(
+        const shot=
+          sea.shots[sea.turn].find(
             p=>p[0]===r && p[1]===c
           );
 
-
         if(shot){
 
-          el.classList
-          .add(
-            shot[2]
-            ?"hit"
-            :"miss"
+          el.classList.add(
+            shot[2] ? "hit" : "miss"
           );
 
         }
@@ -1638,44 +2460,36 @@ function seaClick(r,c){
 
   }
 
-
   if(sea.phase!=="battle"){
     return;
   }
 
-
-  let enemy =
-    sea.turn===1 ? 2 : 1;
-
+  const enemy=sea.turn===1 ? 2 : 1;
 
   if(
-    sea.shots[sea.turn]
-    .some(
+    sea.shots[sea.turn].some(
       p=>p[0]===r && p[1]===c
     )
   ){
     return;
   }
 
-
-  let hit =
-    sea.ships[enemy]
-    .some(
+  const hit=
+    sea.ships[enemy].some(
       p=>p[0]===r && p[1]===c
     );
 
-
-  sea.shots[sea.turn]
-  .push([r,c,hit]);
+  sea.shots[sea.turn].push([
+    r,
+    c,
+    hit
+  ]);
 
 
   if(
     hit &&
-    sea.ships[enemy]
-    .every(
-      p=>
-      sea.shots[sea.turn]
-      .some(
+    sea.ships[enemy].every(
+      p=>sea.shots[sea.turn].some(
         s=>s[0]===p[0] &&
            s[1]===p[1]
       )
@@ -1690,7 +2504,6 @@ function seaClick(r,c){
 
   }
 
-
   renderSea();
 
 }
@@ -1698,50 +2511,42 @@ function seaClick(r,c){
 
 function placeShip(r,c){
 
-  let lengths=[3,2,2];
+  const lengths=[3,2,2];
 
-  let len=lengths[sea.placed];
-
+  const len=lengths[sea.placed];
 
   if(!len){
     return;
   }
 
-
-  let cells=[];
-
+  const cells=[];
 
   for(let i=0;i<len;i++){
 
-    let rr=r;
-
-    let cc=c+i;
-
+    const rr=r;
+    const cc=c+i;
 
     if(cc>=6){
       return;
     }
 
-
     if(
-      sea.ships[sea.turn]
-      .some(
-        p=>p[0]===rr &&
-           p[1]===cc
+      sea.ships[sea.turn].some(
+        p=>p[0]===rr && p[1]===cc
       )
     ){
       return;
     }
 
-
-    cells.push([rr,cc]);
+    cells.push([
+      rr,
+      cc
+    ]);
 
   }
 
 
-  sea.ships[sea.turn]
-  .push(...cells);
-
+  sea.ships[sea.turn].push(...cells);
 
   sea.placed++;
 
@@ -1777,14 +2582,12 @@ restartSea();
 
 async function copyAddress(){
 
-  const address =
-  "Ленинградская область, Выборгский район, Первомайское сельское поселение, посёлок Горки, ул. Озёрная, 1А";
-
+  const address=
+    "Ленинградская область, Выборгский район, Первомайское сельское поселение, посёлок Горки, ул. Озёрная, 1А";
 
   try{
 
-    await navigator.clipboard
-    .writeText(address);
+    await navigator.clipboard.writeText(address);
 
     alert("Адрес скопирован");
 
@@ -1809,7 +2612,7 @@ async function sharePage(){
       title:"Вася — 38! 🏕️",
 
       text:
-      "День рождения 10 октября 2026 · Greenvald Park Scandinavia",
+        "День рождения 10 октября 2026 · Greenvald Park Scandinavia",
 
       url:location.href
 
@@ -1819,8 +2622,9 @@ async function sharePage(){
 
     try{
 
-      await navigator.clipboard
-      .writeText(location.href);
+      await navigator.clipboard.writeText(
+        location.href
+      );
 
       alert("Ссылка скопирована");
 
